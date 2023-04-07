@@ -15,6 +15,8 @@ namespace Monopoly
 
 
             Setup = CFuncLibrary.Read_Xml(path_ied);
+
+
             
 
 

@@ -11,14 +11,16 @@ namespace Monopoly
         public String Name { get; set; }
         public Int32 Value { get; set; }
         public String Color { get; set; }
+        public Boolean Turn { get; set; }
 
         public CProperties() { }
 
-        public CProperties (string name, int value, string color)
+        public CProperties (string name, int value, string color, bool turn)
         {
             Name = name;
             Value = value;
             Color = color;
+            Turn = turn;
         }
     }
 }

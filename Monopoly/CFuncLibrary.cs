@@ -24,8 +24,9 @@ namespace Monopoly
                 String Id       = playerNode.Attributes["Id"].Value;
                 String Money    = playerNode.Attributes["Money"].Value;
                 String Figure   = playerNode.Attributes["Figure"].Value;
+                String Turn     = playerNode.Attributes["Turn"].Value;
 
-                CPlayers players = new CPlayers(Name, Convert.ToInt32(Id), Convert.ToInt32(Money), Figure);
+                CPlayers players = new CPlayers(Name, Convert.ToInt32(Id), Convert.ToInt32(Money), Figure, Convert.ToBoolean(Turn));
                 SetUp.AddlistPlayers(players);
             }
 
@@ -37,8 +38,9 @@ namespace Monopoly
                 String Name = propertyNode.Attributes["Name"].Value;
                 String Value = propertyNode.Attributes["Value"].Value;
                 String Color = propertyNode.Attributes["Color"].Value;
+                String Sold = propertyNode.Attributes["Sold"].Value;
 
-                CProperties property = new CProperties (Name, Convert.ToInt32(Value), Color);
+                CProperties property = new CProperties (Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold));
                 SetUp.AddlistProperties(property);
             }
 
