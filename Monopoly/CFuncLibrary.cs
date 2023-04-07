@@ -25,8 +25,9 @@ namespace Monopoly
                 String Money    = playerNode.Attributes["Money"].Value;
                 String Figure   = playerNode.Attributes["Figure"].Value;
                 String Turn     = playerNode.Attributes["Turn"].Value;
+                String Box = playerNode.Attributes["Box"].Value;
 
-                CPlayers players = new CPlayers(Name, Convert.ToInt32(Id), Convert.ToInt32(Money), Figure, Convert.ToBoolean(Turn));
+                CPlayers players = new CPlayers(Name, Convert.ToInt32(Id), Convert.ToInt32(Money), Figure, Convert.ToBoolean(Turn), Convert.ToInt32(Box));
                 SetUp.AddlistPlayers(players);
             }
 
