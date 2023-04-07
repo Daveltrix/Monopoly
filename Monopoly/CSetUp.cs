@@ -14,8 +14,8 @@ namespace Monopoly
             _LProperties = new List<CProperties>();
         }
 
-        public List<CPlayers> _LClayers { get; private set; }
-        public List<CProperties> _LProperties { get; private set; }
+        public List<CPlayers> _LClayers { get; set; }
+        public List<CProperties> _LProperties { get;  set; }
 
 
 
