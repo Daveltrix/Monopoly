@@ -11,10 +11,10 @@ namespace Monopoly
 
             String path_ied = "Game.ied";
 
-            List<CPlayers> _ListPlayers = new List<CPlayers>();
+            CSetUp Setup = new CSetUp();
 
 
-            _ListPlayers = CFuncLibrary.Read_Xml(path_ied);
+            Setup = CFuncLibrary.Read_Xml(path_ied);
             
 
 
