@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Xml;
-using FuncLibrary;
 
-namespace MiPrograma
+namespace Monopoly
 {
     class Program
     {
@@ -11,8 +10,12 @@ namespace MiPrograma
             Console.WriteLine("COMIENZA LA PARTIDA MAS DIVERTIDA DE TU VIDA: EL MONOPOLY");
 
             String path_ied = "Game.ied";
+
+            List<CPlayers> _ListPlayers = new List<CPlayers>();
+
+
+            _ListPlayers = CFuncLibrary.Read_Xml(path_ied);
             
-            FunctionClass.Read_Xml(path_ied);
 
 
             Console.WriteLine("Authors: PASCUAL Y JAIME");
