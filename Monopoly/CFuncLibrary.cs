@@ -11,39 +11,42 @@ namespace Monopoly
     {
         public static CSetUp Read_Xml(String path_ied)
         {
-            CSetUp SetUp= new CSetUp();
-
-
+            #region INICIALIZATE
+            CSetUp SetUp = new CSetUp();
             XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(path_ied);
+            xmlDoc.Load(path_ied);
+            #endregion
 
+            #region PLAYERS
             XmlNodeList? playerNodes = xmlDoc.SelectNodes("//player");
             foreach (XmlNode playerNode in playerNodes)
             {           
-                String Name     = playerNode.Attributes["Name"].Value;
-                String Id       = playerNode.Attributes["Id"].Value;
-                String Money    = playerNode.Attributes["Money"].Value;
-                String Figure   = playerNode.Attributes["Figure"].Value;
-                String Turn     = playerNode.Attributes["Turn"].Value;
-                String Box = playerNode.Attributes["Box"].Value;
+                String Name     =   playerNode.Attributes["Name"].Value;
+                String Id       =   playerNode.Attributes["Id"].Value;
+                String Money    =   playerNode.Attributes["Money"].Value;
+                String Figure   =   playerNode.Attributes["Figure"].Value;
+                String Turn     =   playerNode.Attributes["Turn"].Value;
+                String Box      =   playerNode.Attributes["Box"].Value;
 
                 CPlayers players = new CPlayers(Name, Convert.ToInt32(Id), Convert.ToInt32(Money), Figure, Convert.ToBoolean(Turn), Convert.ToInt32(Box));
                 SetUp.AddlistPlayers(players);
             }
+            #endregion
 
 
-
-            XmlNodeList? Node_Property = xmlDoc.SelectNodes("//Property");
-            foreach (XmlNode propertyNode in Node_Property)
+            #region POKEMONS
+            XmlNodeList? NodePokemon = xmlDoc.SelectNodes("//Property");
+            foreach (XmlNode pokemonNode in NodePokemon)
             {
-                String Name = propertyNode.Attributes["Name"].Value;
-                String Value = propertyNode.Attributes["Value"].Value;
-                String Color = propertyNode.Attributes["Color"].Value;
-                String Sold = propertyNode.Attributes["Sold"].Value;
+                String Name     =   pokemonNode.Attributes["Name"].Value;
+                String Value    =   pokemonNode.Attributes["Value"].Value;
+                String Color    =   pokemonNode.Attributes["Color"].Value;
+                String Sold     =   pokemonNode.Attributes["Sold"].Value;
 
-                CProperties property = new CProperties (Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold));
+                CPokemons property = new CPokemons (Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold));
                 SetUp.AddlistProperties(property);
             }
+            #endregion
 
 
             return SetUp;
