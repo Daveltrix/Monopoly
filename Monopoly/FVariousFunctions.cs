@@ -10,6 +10,12 @@ namespace Monopoly
     {
         public FVariousFunctions() { }
 
+
+
+        /// <summary>
+        /// Funcion que simula el lanzamiento de un dado
+        /// </summary>
+        /// <returns></returns>
         public static Int32 LanzarDado()
         {
             Random rnd = new Random();
@@ -17,7 +23,9 @@ namespace Monopoly
             return RandomNumber;
         }
 
-
+        /// <summary>
+        /// Muestra por consola los comandos que hay
+        /// </summary>
         public static void ShowCommandsConsole()
         {
             Console.WriteLine("Opcion1: Estado");
