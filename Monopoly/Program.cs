@@ -15,25 +15,9 @@ namespace Monopoly
             Setup = CFuncLibrary.Read_Xml(path_ied);
             #endregion
 
-            Int32 prueba = 0;
-            Int32 dado = 0;
-            //while(true)
-            //{
-            //    dado = FVariousFunctions.LanzarDado();
-            //    prueba = prueba + dado;
-                
-
-            //    if (prueba >= 39)
-            //    {
-            //        prueba = 0 + prueba - 39;
-            //    }
-            //    Console.WriteLine(dado.ToString() +"       "+prueba.ToString());
-            //    string salir = Console.ReadLine();
-            //    if (salir.Contains("a"))
-            //    {
-            //        break;
-            //    }
-            //}
+            Int32 TotalBox = 3;
+            String ReadConsole;
+            String Command;
 
 
 
@@ -42,6 +26,7 @@ namespace Monopoly
             {
                 foreach(CPlayers Player in Setup._LClayers)
                 {
+                    Console.WriteLine("======================================================");
                     Int32 Dice = FVariousFunctions.LanzarDado();
                     if (((Player.Box == 4) || (Player.Box == 5) || (Player.Box == 6)) && Player.Turn == true)
                     {
@@ -53,20 +38,38 @@ namespace Monopoly
                     {
                         Player.Turn = true;
                         Player.Box = Player.Box + Dice;
-                        if (Player.Box >= 39)
+                        if (Player.Box >= TotalBox)
                         {
-                            Player.Box = 0 + Player.Box - 39;
+                            Player.Box = 0 + Player.Box - TotalBox;
                             Player.Money = Player.Money + 100;
                         }
                         Console.WriteLine($"Ha salido un: {Dice.ToString()}. El jugador {Player.Id} -->" +
                             $" {Player.Name} se encuentra en la casilla: {Player.Box}.");
+                        Console.WriteLine("======================================================");
+                        Console.WriteLine();
+                        Console.WriteLine();
                     }
-                    Console.ReadKey();
                 }
 
-                string salir = Console.ReadLine();
-                if (salir.Contains("a"))
+                Console.Write("¿Desea ver la partida?");
+                ReadConsole = Console.ReadLine();
+                if (ReadConsole.Contains("y"))
                 {
+                    while(true)
+                    {
+                        Console.WriteLine("Introuduzca el comando");
+                        FVariousFunctions.ShowCommandsConsole();
+                        ReadConsole = Console.ReadLine();
+                        if (ReadConsole.Contains("Continue"))
+                        {
+                            break;
+                        }
+                        else
+                        {
+
+                        }
+                        
+                    }
                     break;
                 }
             }

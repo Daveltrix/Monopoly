@@ -16,5 +16,13 @@ namespace Monopoly
             int RandomNumber = rnd.Next(1, 7);
             return RandomNumber;
         }
+
+
+        public static void ShowCommandsConsole()
+        {
+            Console.WriteLine("Opcion1: Estado");
+            Console.WriteLine("Opcion2: Pokemons");
+            Console.WriteLine("Opcion1: Continue");
+        }
     }
 }
