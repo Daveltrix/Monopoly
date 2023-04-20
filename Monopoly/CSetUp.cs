@@ -11,11 +11,11 @@ namespace Monopoly
         public CSetUp() 
         {
             _LClayers = new List<CPlayers>();
-            _LProperties = new List<CPokemons>();
+            _LPokemon = new List<CPokemon>();
         }
 
         public List<CPlayers> _LClayers { get; set; }
-        public List<CPokemons> _LProperties { get;  set; }
+        public List<CPokemon> _LPokemon { get;  set; }
 
 
 
@@ -27,9 +27,9 @@ namespace Monopoly
 
 
 
-        public void AddlistProperties(CPokemons Property)
+        public void AddlistProperties(CPokemon Pokemon)
         {
-            _LProperties.Add(Property);
+            _LPokemon.Add(Pokemon);
         }
 
         
