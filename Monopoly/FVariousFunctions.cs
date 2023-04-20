@@ -11,16 +11,16 @@ namespace Monopoly
         public FVariousFunctions() { }
 
 
-
         /// <summary>
-        /// Funcion que simula el lanzamiento de un dado
+        /// Funcion que simula un lanzamiento de un dado
         /// </summary>
         /// <returns></returns>
         public static Int32 LanzarDado()
         {
             Random rnd = new Random();
             int RandomNumber = rnd.Next(1, 7);
-            return RandomNumber;
+            //return RandomNumber;
+            return 1;
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace Monopoly
         {
             Console.WriteLine("Opcion1: Estado");
             Console.WriteLine("Opcion2: Pokemons");
-            Console.WriteLine("Opcion1: Continue");
+            Console.WriteLine("Opcion3: Continue");
         }
     }
 }
