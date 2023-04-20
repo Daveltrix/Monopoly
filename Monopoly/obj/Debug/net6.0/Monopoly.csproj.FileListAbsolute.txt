@@ -1,0 +1,15 @@
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\bin\Debug\net6.0\Monopoly.exe
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\bin\Debug\net6.0\Monopoly.deps.json
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\bin\Debug\net6.0\Monopoly.runtimeconfig.json
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\bin\Debug\net6.0\Monopoly.dll
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\bin\Debug\net6.0\Monopoly.pdb
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\Monopoly.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\Monopoly.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\Monopoly.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\Monopoly.AssemblyInfo.cs
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\Monopoly.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\Monopoly.dll
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\refint\Monopoly.dll
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\Monopoly.pdb
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\Monopoly.genruntimeconfig.cache
+C:\Users\Usuario\Documents\Repositorio\MonopolyGame\Monopoly\obj\Debug\net6.0\ref\Monopoly.dll
