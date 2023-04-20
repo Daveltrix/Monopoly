@@ -14,21 +14,41 @@ namespace Monopoly
             CSetUp Setup = new CSetUp();
             Setup = CFuncLibrary.Read_Xml(path_ied);
             #endregion
-
             Int32 TotalBox = 3;
-            String ReadConsole;
-            String Command;
+            String consola;
+            String comando;
+
+            Int32 prueba = 0;
+            Int32 dado = 0;
+            
+            //while(true)
+            //{
+            //    dado = FVariousFunctions.LanzarDado();
+            //    prueba = prueba + dado;
+                
+
+            //    if (prueba >= 39)
+            //    {
+            //        prueba = 0 + prueba - 39;
+            //    }
+            //    Console.WriteLine(dado.ToString() +"       "+prueba.ToString());
+            //    string salir = Console.ReadLine();
+            //    if (salir.Contains("a"))
+            //    {
+            //        break;
+            //    }
+            //}
 
 
 
-
+            
             while(true)
             {
                 foreach(CPlayers Player in Setup._LClayers)
                 {
-                    Console.WriteLine("======================================================");
+                    Console.WriteLine("==============================================================");
                     Int32 Dice = FVariousFunctions.LanzarDado();
-                    if (((Player.Box == 4) || (Player.Box == 5) || (Player.Box == 6)) && Player.Turn == true)
+                    if (((Player.Box == 15) || (Player.Box == 16) || (Player.Box == 17)) && Player.Turn == true)
                     {
                         Player.Turn = false;
                         Console.WriteLine($"Ha caido en la carcel. El jugador {Player.Id} --> " +
@@ -40,38 +60,42 @@ namespace Monopoly
                         Player.Box = Player.Box + Dice;
                         if (Player.Box >= TotalBox)
                         {
-                            Player.Box = 0 + Player.Box - TotalBox;
+                            Player.Box = Player.Box - TotalBox;
                             Player.Money = Player.Money + 100;
                         }
                         Console.WriteLine($"Ha salido un: {Dice.ToString()}. El jugador {Player.Id} -->" +
                             $" {Player.Name} se encuentra en la casilla: {Player.Box}.");
-                        Console.WriteLine("======================================================");
+
+                        Game_Loop.Function_Loop(Player.Box, Player, Setup._LPokemon, Setup._LClayers);
+                        Console.WriteLine("==============================================================");
                         Console.WriteLine();
                         Console.WriteLine();
+                        
                     }
                 }
-
-                Console.Write("¿Desea ver la partida?");
-                ReadConsole = Console.ReadLine();
-                if (ReadConsole.Contains("y"))
+                Console.WriteLine("¿Desea ver estado de la partida?");
+                consola = Console.ReadLine();
+                if (consola.Contains("y"))
                 {
                     while(true)
                     {
-                        Console.WriteLine("Introuduzca el comando");
+                        Console.WriteLine("Introduce comando");
                         FVariousFunctions.ShowCommandsConsole();
-                        ReadConsole = Console.ReadLine();
-                        if (ReadConsole.Contains("Continue"))
+                        comando = Console.ReadLine();
+                        if (comando.Contains("continue"))
                         {
                             break;
                         }
                         else
                         {
-
+                            Game_Loop.State_Game(comando, Setup);
                         }
                         
                     }
-                    break;
+                    
+
                 }
+
             }
             
             
