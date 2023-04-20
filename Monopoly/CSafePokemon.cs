@@ -13,6 +13,7 @@ namespace Monopoly
 
         }
 
+        public CSafePokemon(string name) { }
         
     }
 }
