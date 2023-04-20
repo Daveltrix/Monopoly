@@ -9,6 +9,11 @@ namespace Monopoly
 {
     public class CFuncLibrary
     {
+        /// <summary>
+        /// Funcion para leer el archivo de configuracion ied.
+        /// </summary>
+        /// <param name="path_ied"></param> Nombre del archivo .ied
+        /// <returns></returns> Se retornan un objeto con listas en funcion del archivo ied
         public static CSetUp Read_Xml(String path_ied)
         {
             #region INICIALIZATE
@@ -16,6 +21,7 @@ namespace Monopoly
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(path_ied);
             #endregion
+
 
             #region PLAYERS
             XmlNodeList? playerNodes = xmlDoc.SelectNodes("//player");
@@ -34,8 +40,8 @@ namespace Monopoly
             #endregion
 
 
-            #region POKEMONS
-            XmlNodeList? NodePokemon = xmlDoc.SelectNodes("//Property");
+            #region POKEMON
+            XmlNodeList? NodePokemon = xmlDoc.SelectNodes("//Pokemon");
             foreach (XmlNode pokemonNode in NodePokemon)
             {
                 String Name     =   pokemonNode.Attributes["Name"].Value;
@@ -43,8 +49,8 @@ namespace Monopoly
                 String Color    =   pokemonNode.Attributes["Color"].Value;
                 String Sold     =   pokemonNode.Attributes["Sold"].Value;
 
-                CPokemons property = new CPokemons (Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold));
-                SetUp.AddlistProperties(property);
+                CPokemon Pokemon = new CPokemon (Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold));
+                SetUp.AddlistProperties(Pokemon);
             }
             #endregion
 
