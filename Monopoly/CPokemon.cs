@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace Monopoly
 {
-    public class CPokemons
+    public class CPokemon
     {
         public String Name { get; set; }
         public Int32 Value { get; set; }
         public String Color { get; set; }
-        public Boolean Turn { get; set; }
+        public Boolean Sold { get; set; }
         public String Trainer { get; set; }
 
-        public CPokemons() { }
+        public CPokemon() { }
 
-        public CPokemons (string name, int value, string color, bool turn)
+        public CPokemon (string name, int value, string color, bool sold)
         {
-            Name = name;
-            Value = value;
-            Color = color;
-            Turn = turn;
+            this.Name = name;
+            this.Value = value;
+            this.Color = color;
+            this.Sold = sold;
         }
     }
 }
