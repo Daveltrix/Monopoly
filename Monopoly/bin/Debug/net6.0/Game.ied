@@ -7,71 +7,76 @@
 	</Players>
 
 	<Pokemons>
-		<Pokemon Name="Chikorita" 		Value="1"	Sold="false" 	Color="Brown" />
-		<Pokemon Name="Cyndaquil" 		Value="2"	Sold="false" 	Color="Brown" />
-		<Pokemon Name="Totodile" 		Value="3"	Sold="false" 	Color="SkyBlue" />
-		<Pokemon Name="Sentret" 		Value="4"	Sold="false" 	Color="SkyBlue" />
-		<Pokemon Name="Furret" 			Value="5"	Sold="false" 	Color="SkyBlue" />
-		<Pokemon Name="Hoothoot" 		Value="6"	Sold="false" 	Color="Pink" />
-		<Pokemon Name="Noctowl" 		Value="7"	Sold="false" 	Color="Pink" />
-		<Pokemon Name="Ledyba" 			Value="8"	Sold="false" 	Color="Pink" />
-		<Pokemon Name="Ledian" 			Value="9"	Sold="false" 	Color="Orange" />
-		<Pokemon Name="Spinarak" 		Value="10"	Sold="false" 	Color="Orange" />
-		<Pokemon Name="Ariados" 		Value="11"	Sold="false" 	Color="Orange" />
-		<Pokemon Name="Crobat" 			Value="12"	Sold="false" 	Color="Red" />
-		<Pokemon Name="Chinchou" 		Value="13"	Sold="false" 	Color="Red" />
-		<Pokemon Name="Lanturn" 		Value="14"	Sold="false" 	Color="Red" />
-		<Pokemon Name="Pichu" 			Value="15"	Sold="false" 	Color="Yellow" />
-		<Pokemon Name="Cleffa" 			Value="16"	Sold="false" 	Color="Yellow" />
-		<Pokemon Name="Igglybuff" 		Value="17"	Sold="false" 	Color="Yellow" />
-		<Pokemon Name="Togepi" 			Value="18"	Sold="false" 	Color="Green" />
-		<Pokemon Name="Togetic" 		Value="19"	Sold="false" 	Color="Green" />
-		<Pokemon Name="Natu" 			Value="20"	Sold="false" 	Color="Green" />
-		<Pokemon Name="Xatu" 			Value="21"	Sold="false" 	Color="Blue" />
-		<Pokemon Name="Celebi" 			Value="22"	Sold="false" 	Color="Blue" />
+		<Pokemon Name="Chikorita" 		Value="1"	Sold="false"	MaxNum = "6" 	Color="Brown" />
+		<Pokemon Name="Cyndaquil" 		Value="2"	Sold="false"	MaxNum = "6" 	Color="Brown" />
+		<Pokemon Name="Totodile" 		Value="3"	Sold="false"	MaxNum = "6" 	Color="SkyBlue" />
+		<Pokemon Name="Sentret" 		Value="4"	Sold="false"	MaxNum = "6" 	Color="SkyBlue" />
+		<Pokemon Name="Furret" 			Value="5"	Sold="false"	MaxNum = "6" 	Color="SkyBlue" />
+		<Pokemon Name="Hoothoot" 		Value="6"	Sold="false"	MaxNum = "6" 	Color="Pink" />
+		<Pokemon Name="Noctowl" 		Value="7"	Sold="false"	MaxNum = "6" 	Color="Pink" />
+		<Pokemon Name="Ledyba" 			Value="8"	Sold="false"	MaxNum = "6" 	Color="Pink" />
+		<Pokemon Name="Ledian" 			Value="9"	Sold="false"	MaxNum = "6" 	Color="Orange" />
+		<Pokemon Name="Spinarak" 		Value="10"	Sold="false"	MaxNum = "6" 	Color="Orange" />
+		<Pokemon Name="Ariados" 		Value="11"	Sold="false"	MaxNum = "6" 	Color="Orange" />
+		<Pokemon Name="Crobat" 			Value="12"	Sold="false"	MaxNum = "6" 	Color="Red" />
+		<Pokemon Name="Chinchou" 		Value="13"	Sold="false"	MaxNum = "6" 	Color="Red" />
+		<Pokemon Name="Lanturn" 		Value="14"	Sold="false"	MaxNum = "6" 	Color="Red" />
+		<Pokemon Name="Pichu" 			Value="15"	Sold="false"	MaxNum = "6" 	Color="Yellow" />
+		<Pokemon Name="Cleffa" 			Value="16"	Sold="false"	MaxNum = "6" 	Color="Yellow" />
+		<Pokemon Name="Igglybuff" 		Value="17"	Sold="false"	MaxNum = "6" 	Color="Yellow" />
+		<Pokemon Name="Togepi" 			Value="18"	Sold="false"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Togetic" 		Value="19"	Sold="false"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Natu" 			Value="20"	Sold="false"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Xatu" 			Value="21"	Sold="false"	MaxNum = "6" 	Color="Blue" />
+		<Pokemon Name="Suicune" 			Value="22"	Sold="false"	MaxNum = "6" 	Color="Blue" />
+		<Pokemon Name="Raikou" 			Value="23"	Sold="false"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Entei" 		Value="24"	Sold="false"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Ho-Ho" 			Value="25"	Sold="false"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Lugia" 			Value="26"	Sold="false"	MaxNum = "6" 	Color="Blue" />
+		<Pokemon Name="Celebi" 			Value="27"	Sold="false"	MaxNum = "6" 	Color="Blue" />
 	 </Pokemons>
 	 
 	 
 	 <Boxes>
-	  <Box Name="Box 1" position="0"/>
-	  <Box Name="Box 2" position="1"/>
-	  <Box Name="Box 3" position="2"/>
-	  <Box Name="Box 4" position="3"/>
-	  <Box Name="Box 5" position="4"/>
-	  <Box Name="Box 6" position="5"/>
-	  <Box Name="Box 7" position="6"/>
-	  <Box Name="Box 8" position="7"/>
-	  <Box Name="Box 9" position="8"/>
-	  <Box Name="Box 10" position="9"/>
-	  <Box Name="Box 11" position="10"/>
-	  <Box Name="Box 12" position="11"/>
-	  <Box Name="Box 13" position="12"/>
-	  <Box Name="Box 14" position="13"/>
-	  <Box Name="Box 15" position="14"/>
-	  <Box Name="Box 16" position="15"/>
-	  <Box Name="Box 17" position="16"/>
-	  <Box Name="Box 18" position="17"/>
-	  <Box Name="Box 19" position="18"/>
-	  <Box Name="Box 20" position="19"/>
-	  <Box Name="Box 21" position="20"/>
-	  <Box Name="Box 22" position="21"/>
-	  <Box Name="Box 23" position="22"/>
-	  <Box Name="Box 24" position="23"/>
-	  <Box Name="Box 25" position="24"/>
-	  <Box Name="Box 26" position="25"/>
-	  <Box Name="Box 27" position="26"/>
-	  <Box Name="Box 28" position="27"/>
-	  <Box Name="Box 29" position="28"/>
-	  <Box Name="Box 30" position="29"/>
-	  <Box Name="Box 31" position="30"/>
-	  <Box Name="Box 32" position="31"/>
-	  <Box Name="Box 33" position="32"/>
-	  <Box Name="Box 34" position="33"/>
-	  <Box Name="Box 35" position="34"/>
-	  <Box Name="Box 36" position="35"/>
-	  <Box Name="Box 37" position="36"/>
-	  <Box Name="Box 38" position="37"/>
-	  <Box Name="Box 39" position="38"/>
-	  <Box Name="Box 40" position="39"/>
+	  <Box Name="Box 1" position="0"	    NameBox = "Go"/>
+	  <Box Name="Box 2" position="1"	    NameBox = ""/>
+	  <Box Name="Box 3" position="2"	    NameBox = "Caja"/>
+	  <Box Name="Box 4" position="3"	    NameBox = ""/>
+	  <Box Name="Box 5" position="4"	    NameBox = ""/>
+	  <Box Name="Box 6" position="5"	    NameBox = ""/>
+	  <Box Name="Box 7" position="6"	    NameBox = ""/>
+	  <Box Name="Box 8" position="7"	    NameBox = "Chance"/>
+	  <Box Name="Box 9" position="8"	    NameBox = ""/>
+	  <Box Name="Box 10" position="9"	    NameBox = ""/>
+	  <Box Name="Box 11" position="10"	    NameBox = "Carcel"/>
+	  <Box Name="Box 12" position="11"	    NameBox = ""/>
+	  <Box Name="Box 13" position="12"	    NameBox = ""/>
+	  <Box Name="Box 14" position="13"	    NameBox = ""/>
+	  <Box Name="Box 15" position="14"	    NameBox = ""/>
+	  <Box Name="Box 16" position="15"	    NameBox = "Servicio"/>
+	  <Box Name="Box 17" position="16"	    NameBox = ""/>
+	  <Box Name="Box 18" position="17"	    NameBox = "Arca"/>
+	  <Box Name="Box 19" position="18"	    NameBox = ""/>
+	  <Box Name="Box 20" position="19"	    NameBox = ""/>
+	  <Box Name="Box 21" position="20"	    NameBox = "Ley de miedo"/>
+	  <Box Name="Box 22" position="21"	    NameBox = ""/>
+	  <Box Name="Box 23" position="22"	    NameBox = "Chance"/>
+	  <Box Name="Box 24" position="23"	    NameBox = ""/>
+	  <Box Name="Box 25" position="24"	    NameBox = ""/>
+	  <Box Name="Box 26" position="25"	    NameBox = ""/>
+	  <Box Name="Box 27" position="26"	    NameBox = ""/>
+	  <Box Name="Box 28" position="27"	    NameBox = ""/>
+	  <Box Name="Box 29" position="28"	    NameBox = "Servicio"/>
+	  <Box Name="Box 30" position="29"	    NameBox = ""/>
+	  <Box Name="Box 31" position="30"	    NameBox = "Carcel"/>
+	  <Box Name="Box 32" position="31"	    NameBox = ""/>
+	  <Box Name="Box 33" position="32"	    NameBox = ""/>
+	  <Box Name="Box 34" position="33"	    NameBox = "Arca"/>
+	  <Box Name="Box 35" position="34"	    NameBox = ""/>
+	  <Box Name="Box 36" position="35"	    NameBox = ""/>
+	  <Box Name="Box 37" position="36"	    NameBox = "Chance"/>
+	  <Box Name="Box 38" position="37"	    NameBox = ""/>
+	  <Box Name="Box 39" position="38"	    NameBox = "Servicio"/>
+	  <Box Name="Box 40" position="39"	    NameBox = ""/>
 	</Boxes>
  </Game>
