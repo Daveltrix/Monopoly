@@ -267,14 +267,14 @@ namespace Monopoly
         /// <param name="comand"></param>
         /// <param name="Setup"></param>
         /// <returns></returns>
-        public static Int32 State_Game(String comand, CSetUp Setup)
+        public static Int32 State_Game(String comand, Game_SetUp Setup)
         {
             Int32 num_return = 0;
 
             switch(comand)
             {
                 case "Estado":
-                    foreach(CPlayers Player in Setup._LClayers)
+                    foreach(CPlayers Player in Setup._LPlayers)
                     {
                         Console.WriteLine($"El jugador {Player.Name} tiene {Player.Money} Pokemonedas.");
                     }

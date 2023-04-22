@@ -11,40 +11,17 @@ namespace Monopoly
 
             #region CARGAR PARAMETROS
             String path_ied = "Game.ied";
-            CSetUp Setup = new CSetUp();
-            Setup = CFuncLibrary.Read_Xml(path_ied);
+            Game_SetUp Setup = new Game_SetUp();
+            Setup = FFuncLibrary.Read_Xml(path_ied);
             #endregion
             Int32 TotalBox = 3;
             String consola;
             String comando;
 
-            Int32 prueba = 0;
-            Int32 dado = 0;
-            
-            //while(true)
-            //{
-            //    dado = FVariousFunctions.LanzarDado();
-            //    prueba = prueba + dado;
-                
-
-            //    if (prueba >= 39)
-            //    {
-            //        prueba = 0 + prueba - 39;
-            //    }
-            //    Console.WriteLine(dado.ToString() +"       "+prueba.ToString());
-            //    string salir = Console.ReadLine();
-            //    if (salir.Contains("a"))
-            //    {
-            //        break;
-            //    }
-            //}
-
-
-
             
             while(true)
             {
-                foreach(CPlayers Player in Setup._LClayers)
+                foreach(CPlayers Player in Setup._LPlayers)
                 {
                     Console.WriteLine("==============================================================");
                     Int32 Dice = FVariousFunctions.LanzarDado();
@@ -66,7 +43,7 @@ namespace Monopoly
                         Console.WriteLine($"Ha salido un: {Dice.ToString()}. El jugador {Player.Id} -->" +
                             $" {Player.Name} se encuentra en la casilla: {Player.Box}.");
 
-                        Game_Loop.Function_Loop(Player.Box, Player, Setup._LPokemon, Setup._LClayers);
+                        Game_Loop.Function_Loop(Player.Box, Player, Setup._LPokemon, Setup._LPlayers);
                         Console.WriteLine("==============================================================");
                         Console.WriteLine();
                         Console.WriteLine();

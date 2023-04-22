@@ -7,17 +7,17 @@ using System.Xml;
 
 namespace Monopoly
 {
-    public class CFuncLibrary
+    public class FFuncLibrary
     {
         /// <summary>
         /// Funcion para leer el archivo de configuracion ied.
         /// </summary>
         /// <param name="path_ied"></param> Nombre del archivo .ied
         /// <returns></returns> Se retornan un objeto con listas en funcion del archivo ied
-        public static CSetUp Read_Xml(String path_ied)
+        public static Game_SetUp Read_Xml(String path_ied)
         {
             #region INICIALIZATE
-            CSetUp SetUp = new CSetUp();
+            Game_SetUp SetUp = new Game_SetUp();
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(path_ied);
             #endregion
@@ -50,9 +50,35 @@ namespace Monopoly
                 String Sold     =   pokemonNode.Attributes["Sold"].Value;
 
                 CPokemon Pokemon = new CPokemon (Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold));
-                SetUp.AddlistProperties(Pokemon);
+                SetUp.AddlistPokemons(Pokemon);
             }
             #endregion
+
+
+            #region BOXES
+            XmlNodeList? NodeBoxes = xmlDoc.SelectNodes("//Box");
+            foreach (XmlNode boxNode in NodeBoxes)
+            {
+                String Name = boxNode.Attributes["Name"].Value;
+                String Position = boxNode.Attributes["position"].Value;
+                String NameBox = boxNode.Attributes["NameBox"].Value;
+
+                CBox Box = new CBox(Name, Convert.ToInt32(Position), NameBox);
+                SetUp.AddlistBox(Box);
+            }
+            #endregion
+
+
+            Int32 index_pokemon = 0;
+
+            foreach (CBox box in SetUp._LBoxes)
+            {
+                if (String.IsNullOrEmpty(box.NameBox)) 
+                {
+                    box.NameBox = SetUp._LPokemon[index_pokemon].Name;
+                    index_pokemon++;
+                }
+            }
 
 
             return SetUp;
