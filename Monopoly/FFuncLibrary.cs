@@ -25,14 +25,14 @@ namespace Monopoly
 
             #region PLAYERS
             XmlNodeList? playerNodes = xmlDoc.SelectNodes("//player");
-            foreach (XmlNode playerNode in playerNodes)
+            foreach (XmlNode playerNode in playerNodes!)
             {           
-                String Name     =   playerNode.Attributes["Name"].Value;
-                String Id       =   playerNode.Attributes["Id"].Value;
-                String Money    =   playerNode.Attributes["Money"].Value;
-                String Figure   =   playerNode.Attributes["Figure"].Value;
-                String Turn     =   playerNode.Attributes["Turn"].Value;
-                String Box      =   playerNode.Attributes["Box"].Value;
+                String Name     =   playerNode.Attributes!["Name"]!.Value;
+                String Id       =   playerNode.Attributes!["Id"]!.Value;
+                String Money    =   playerNode.Attributes!["Money"]!.Value;
+                String Figure   =   playerNode.Attributes!["Figure"]!.Value;
+                String Turn     =   playerNode.Attributes!["Turn"]!.Value;
+                String Box      =   playerNode.Attributes!["Box"]!.Value;
 
                 CPlayers players = new CPlayers(Name, Convert.ToInt32(Id), Convert.ToInt32(Money), Figure, Convert.ToBoolean(Turn), Convert.ToInt32(Box));
                 SetUp.AddlistPlayers(players);
@@ -42,12 +42,12 @@ namespace Monopoly
 
             #region POKEMON
             XmlNodeList? NodePokemon = xmlDoc.SelectNodes("//Pokemon");
-            foreach (XmlNode pokemonNode in NodePokemon)
+            foreach (XmlNode pokemonNode in NodePokemon!)
             {
-                String Name     =   pokemonNode.Attributes["Name"].Value;
-                String Value    =   pokemonNode.Attributes["Value"].Value;
-                String Color    =   pokemonNode.Attributes["Color"].Value;
-                String Sold     =   pokemonNode.Attributes["Sold"].Value;
+                String Name     =   pokemonNode.Attributes!["Name"]!.Value;
+                String Value    =   pokemonNode.Attributes!["Value"]!.Value;
+                String Color    =   pokemonNode.Attributes!["Color"]!.Value;
+                String Sold     =   pokemonNode.Attributes!["Sold"]!.Value;
 
                 CPokemon Pokemon = new CPokemon (Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold));
                 SetUp.AddlistPokemons(Pokemon);
@@ -57,11 +57,11 @@ namespace Monopoly
 
             #region BOXES
             XmlNodeList? NodeBoxes = xmlDoc.SelectNodes("//Box");
-            foreach (XmlNode boxNode in NodeBoxes)
+            foreach (XmlNode boxNode in NodeBoxes!)
             {
-                String Name = boxNode.Attributes["Name"].Value;
-                String Position = boxNode.Attributes["position"].Value;
-                String NameBox = boxNode.Attributes["NameBox"].Value;
+                String Name = boxNode.Attributes!["Name"]!.Value;
+                String Position = boxNode.Attributes!["position"]!.Value;
+                String NameBox = boxNode.Attributes!["NameBox"]!.Value;
 
                 CBox Box = new CBox(Name, Convert.ToInt32(Position), NameBox);
                 SetUp.AddlistBox(Box);

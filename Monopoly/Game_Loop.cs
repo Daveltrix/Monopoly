@@ -34,8 +34,8 @@ namespace Monopoly
                     if (Pokemon[Indexlist].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[Indexlist].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y")) 
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y")) 
                         {
                             Pokemon[Indexlist].Trainer = Player.Name;
                             Player.Money = Player.Money - Pokemon[Indexlist].Value;
@@ -67,8 +67,8 @@ namespace Monopoly
                     if (Pokemon[Indexlist].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[Indexlist].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y"))
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y"))
                         {
                             Pokemon[Indexlist].Trainer = Player.Name;
                             Player.Money = Player.Money - Pokemon[Indexlist].Value;
@@ -99,8 +99,8 @@ namespace Monopoly
                     if (Pokemon[box].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y"))
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y"))
                         {
                             Player.Money = Player.Money - Pokemon[box].Value;
                             Pokemon[box].Sold = true;
@@ -119,8 +119,8 @@ namespace Monopoly
                     if (Pokemon[box].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y"))
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y"))
                         {
                             Player.Money = Player.Money - Pokemon[box].Value;
                             Pokemon[box].Sold = true;
@@ -139,8 +139,8 @@ namespace Monopoly
                     if (Pokemon[box].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y"))
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y"))
                         {
                             Player.Money = Player.Money - Pokemon[box].Value;
                             Pokemon[box].Sold = true;
@@ -159,8 +159,8 @@ namespace Monopoly
                     if (Pokemon[box].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y"))
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y"))
                         {
                             Player.Money = Player.Money - Pokemon[box].Value;
                             Pokemon[box].Sold = true;
@@ -179,8 +179,8 @@ namespace Monopoly
                     if (Pokemon[box].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y"))
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y"))
                         {
                             Player.Money = Player.Money - Pokemon[box].Value;
                             Pokemon[box].Sold = true;
@@ -199,8 +199,8 @@ namespace Monopoly
                     if (Pokemon[box].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y"))
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y"))
                         {
                             Player.Money = Player.Money - Pokemon[box].Value;
                             Pokemon[box].Sold = true;
@@ -219,8 +219,8 @@ namespace Monopoly
                     if (Pokemon[box].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y"))
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y"))
                         {
                             Player.Money = Player.Money - Pokemon[box].Value;
                             Pokemon[box].Sold = true;
@@ -239,8 +239,8 @@ namespace Monopoly
                     if (Pokemon[box].Sold == false)
                     {
                         Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        string answer = Console.ReadLine();
-                        if (answer.Contains("y"))
+                        String? answer = Console.ReadLine();
+                        if (answer!.Contains("y"))
                         {
                             Player.Money = Player.Money - Pokemon[box].Value;
                             Pokemon[box].Sold = true;

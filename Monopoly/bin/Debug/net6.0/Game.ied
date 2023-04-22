@@ -79,4 +79,9 @@
 	  <Box Name="Box 39" position="38"	    NameBox = "Servicio"/>
 	  <Box Name="Box 40" position="39"	    NameBox = ""/>
 	</Boxes>
+	
+	
+	<Settings>
+	</Settings>
+	
  </Game>

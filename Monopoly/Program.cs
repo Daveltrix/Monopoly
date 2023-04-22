@@ -15,8 +15,8 @@ namespace Monopoly
             Setup = FFuncLibrary.Read_Xml(path_ied);
             #endregion
             Int32 TotalBox = 3;
-            String consola;
-            String comando;
+            String? consola;
+            String? comando;
 
             
             while(true)
@@ -52,14 +52,14 @@ namespace Monopoly
                 }
                 Console.WriteLine("¿Desea ver estado de la partida?");
                 consola = Console.ReadLine();
-                if (consola.Contains("y"))
+                if (consola!.Contains("y"))
                 {
                     while(true)
                     {
                         Console.WriteLine("Introduce comando");
                         FVariousFunctions.ShowCommandsConsole();
                         comando = Console.ReadLine();
-                        if (comando.Contains("continue"))
+                        if (comando!.Contains("continue"))
                         {
                             break;
                         }
@@ -80,8 +80,8 @@ namespace Monopoly
 
 
 
-            Console.WriteLine("Authors: PASCUAL Y JAIME");
-            Console.ReadKey();
+            //Console.WriteLine("Authors: PASCUAL Y JAIME");
+            //Console.ReadKey();
         }
     }
 }
