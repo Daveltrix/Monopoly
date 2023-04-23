@@ -12,6 +12,7 @@ namespace Monopoly
             #region CARGAR PARAMETROS
             String path_ied = "Game.ied";
             Game_SetUp Setup = new Game_SetUp();
+            Game_Loop _Game_Loop = new Game_Loop();
             Setup = FFuncLibrary.Read_Xml(path_ied);
             #endregion
             Int32 TotalBox = 3;
@@ -43,7 +44,8 @@ namespace Monopoly
                         Console.WriteLine($"Ha salido un: {Dice.ToString()}. El jugador {Player.Id} -->" +
                             $" {Player.Name} se encuentra en la casilla: {Player.Box}.");
 
-                        Game_Loop.Function_Loop(Player.Box, Player, Setup._LPokemon, Setup._LPlayers);
+                        
+                        _Game_Loop.Function_proof(Player, Setup);
                         Console.WriteLine("==============================================================");
                         Console.WriteLine();
                         Console.WriteLine();

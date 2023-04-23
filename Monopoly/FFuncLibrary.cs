@@ -62,8 +62,10 @@ namespace Monopoly
                 String Name = boxNode.Attributes!["Name"]!.Value;
                 String Position = boxNode.Attributes!["position"]!.Value;
                 String NameBox = boxNode.Attributes!["NameBox"]!.Value;
+                String BoxType = boxNode.Attributes!["BoxType"]!.Value;
+                String BoxPoke = boxNode.Attributes!["BoxPoke"]!.Value;
 
-                CBox Box = new CBox(Name, Convert.ToInt32(Position), NameBox);
+                CBox Box = new CBox(Name, Convert.ToInt32(Position), NameBox, BoxType, Convert.ToInt32(BoxPoke));
                 SetUp.AddlistBox(Box);
             }
             #endregion

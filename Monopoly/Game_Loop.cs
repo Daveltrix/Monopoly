@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Monopoly
 {
     public class Game_Loop
     {
-        public Game_Loop() { }
+        private Int32 _mIndex;
+        private Int32 _mToPay;
+        private CPlayers _mTrainer;
+
+        public Game_Loop() {}
 
         /// <summary>
         /// Funcion que depende de la casilla donde estes realices una funcion
@@ -17,248 +22,57 @@ namespace Monopoly
         /// <param name="Player"></param>
         /// <param name="Pokemon"></param>
         /// <param name="_lPlayer"></param>
-        public static void Function_Loop(Int32 box, CPlayers Player, List<CPokemon> Pokemon, List<CPlayers> _lPlayer)
+        /// 
+
+        public void Function_proof(CPlayers Player, Game_SetUp Setup)
         {
-            Int32 ToPay = 0;
-            Int32 Indexlist;
-            CPlayers Trainer;
+            _mIndex = Setup._LBoxes[Player.Box].BoxPoke;
             
-            
-            switch (box)
+            if (Setup._LBoxes[Player.Box].BoxType.Contains("Pokemon"))
             {
-                case 0:
-                    Console.WriteLine("Se encuentra en la casilla 0");
-                    break;
-                case 1:
-                    Indexlist = 0;
-                    if (Pokemon[Indexlist].Sold == false)
+                if (Setup._LPokemon[_mIndex].Sold == false) // Si el pokemon esta libre
+                {
+                    Console.WriteLine($"El pokemon {Setup._LBoxes[Player.Box].NameBox} se encuentra libre. ¿Deseas capturarlo?");
+                    String? answer = Console.ReadLine();
+                    if (answer!.Contains("y"))
                     {
-                        Console.WriteLine($"Pokemon {Pokemon[Indexlist].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y")) 
-                        {
-                            Pokemon[Indexlist].Trainer = Player.Name;
-                            Player.Money = Player.Money - Pokemon[Indexlist].Value;
-                            Pokemon[Indexlist].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[Indexlist].Name}");
-                        }               
+                        Setup._LPokemon[_mIndex].Trainer = Player.Name;
+                        Player.Money = Player.Money - Setup._LPokemon[_mIndex].Value;
+                        Setup._LPokemon[Setup._LBoxes[Player.Box].BoxPoke].Sold = true;
+                        Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Setup._LPokemon[_mIndex].Name}");
                     }
-                    else if ((Pokemon[Indexlist].Sold == true) && (Player.Name == Pokemon[Indexlist].Trainer))
-                    {
-                        Console.WriteLine("Este pokemon ya lo tienes registrado en la pokedex. Sigue tu aventura");
-                    }
-                    else
-                    {
-                        Console.ReadKey();
-                        Trainer = _lPlayer.Where(x => x.Name == Pokemon[Indexlist].Trainer).First();
-                        Console.WriteLine("El Pokemon pertenece al entrenador: " + Pokemon[Indexlist].Trainer);
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[Indexlist].Name} del entrenador: {Pokemon[Indexlist].Trainer}" );
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[Indexlist].Value;
-                        Player.Money = Player.Money - ToPay;
-                        Trainer.Money = Trainer.Money + ToPay;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
-                        Console.WriteLine($"El entrenador {Player.Name} tiene {Player.Money}");
-                        Console.WriteLine($"El entrenador del pokemon {Trainer.Name} tiene {Trainer.Money}");
+                }
 
-                    }
-                    break;
-                case 2:
-                    Indexlist = 1;
-                    if (Pokemon[Indexlist].Sold == false)
-                    {
-                        Console.WriteLine($"Pokemon {Pokemon[Indexlist].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y"))
-                        {
-                            Pokemon[Indexlist].Trainer = Player.Name;
-                            Player.Money = Player.Money - Pokemon[Indexlist].Value;
-                            Pokemon[Indexlist].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[Indexlist].Name}");
-                        }
-                    }
-                    else if ((Pokemon[Indexlist].Sold == true) && (Player.Name == Pokemon[Indexlist].Trainer))
-                    {
-                        Console.WriteLine("Este pokemon ya lo tienes registrado en la pokedex. Sigue tu aventura");
-                    }
-                    else
-                    {
-                        Console.ReadKey();
-                        Trainer = _lPlayer.Where(x => x.Name == Pokemon[Indexlist].Trainer).First();
-                        Console.WriteLine("El Pokemon pertenece al entrenador: " + Pokemon[Indexlist].Trainer);
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[Indexlist].Name} del entrenador: {Pokemon[Indexlist].Trainer}");
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[Indexlist].Value;
-                        Player.Money = Player.Money - ToPay;
-                        Trainer.Money = Trainer.Money + ToPay;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
-                        Console.WriteLine($"El entrenador {Player.Name} tiene {Player.Money}");
-                        Console.WriteLine($"El entrenador del pokemon {Trainer.Name} tiene {Trainer.Money}");
+                else if ((Setup._LPokemon[_mIndex].Sold == true) && (Player.Name == Setup._LPokemon[_mIndex].Trainer)) // Si tengo al pokemon
+                {
+                    Console.WriteLine("Este pokemon ya lo tienes registrado en la pokedex. Sigue tu aventura");
+                }
 
-                    }
-                    break;
-                case 3:
-                    if (Pokemon[box].Sold == false)
-                    {
-                        Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y"))
-                        {
-                            Player.Money = Player.Money - Pokemon[box].Value;
-                            Pokemon[box].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[box].Name}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[box].Name}. Tira el dado ");
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[box].Value;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
+                else // No tengo al pokemon y hay que pagar
+                {
+                    Console.ReadKey();
+                    _mTrainer = Setup._LPlayers.Where(x => x.Name == Setup._LPokemon[_mIndex].Trainer).First();
+                    Console.WriteLine("El Pokemon pertenece al entrenador: " + Setup._LPokemon[_mIndex].Trainer);
+                    Console.WriteLine($"Te has de enfrentar a {Setup._LPokemon[_mIndex].Name} del entrenador: {Setup._LPokemon[_mIndex].Trainer}");
 
-                    }
-                    break;
-                case 4:
-                    if (Pokemon[box].Sold == false)
-                    {
-                        Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y"))
-                        {
-                            Player.Money = Player.Money - Pokemon[box].Value;
-                            Pokemon[box].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[box].Name}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[box].Name}. Tira el dado ");
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[box].Value;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
+                    _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Value;
+                    Player.Money = Player.Money - _mToPay;
+                    _mTrainer.Money = _mTrainer.Money + _mToPay;
+                    Console.WriteLine("Tienes que pagar: " + _mToPay.ToString() );
+                    Console.WriteLine($"El entrenador {Player.Name} tiene {Player.Money}");
+                    Console.WriteLine($"El entrenador del pokemon {_mTrainer.Name} tiene {_mTrainer.Money}");
 
-                    }
-                    break;
-                case 5:
-                    if (Pokemon[box].Sold == false)
-                    {
-                        Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y"))
-                        {
-                            Player.Money = Player.Money - Pokemon[box].Value;
-                            Pokemon[box].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[box].Name}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[box].Name}. Tira el dado ");
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[box].Value;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
 
-                    }
-                    break;
-                case 6:
-                    if (Pokemon[box].Sold == false)
-                    {
-                        Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y"))
-                        {
-                            Player.Money = Player.Money - Pokemon[box].Value;
-                            Pokemon[box].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[box].Name}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[box].Name}. Tira el dado ");
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[box].Value;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
+                }
 
-                    }
-                    break;
-                case 7:
-                    if (Pokemon[box].Sold == false)
-                    {
-                        Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y"))
-                        {
-                            Player.Money = Player.Money - Pokemon[box].Value;
-                            Pokemon[box].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[box].Name}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[box].Name}. Tira el dado ");
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[box].Value;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
-
-                    }
-                    break;
-                case 8:
-                    if (Pokemon[box].Sold == false)
-                    {
-                        Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y"))
-                        {
-                            Player.Money = Player.Money - Pokemon[box].Value;
-                            Pokemon[box].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[box].Name}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[box].Name}. Tira el dado ");
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[box].Value;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
-
-                    }
-                    break;
-                case 9:
-                    if (Pokemon[box].Sold == false)
-                    {
-                        Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y"))
-                        {
-                            Player.Money = Player.Money - Pokemon[box].Value;
-                            Pokemon[box].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[box].Name}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[box].Name}. Tira el dado ");
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[box].Value;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
-
-                    }
-                    break;
-                case 10:
-                    if (Pokemon[box].Sold == false)
-                    {
-                        Console.WriteLine($"Pokemon {Pokemon[box].Name} salvaja ha aparecido. ¿Desea capturarlo?");
-                        String? answer = Console.ReadLine();
-                        if (answer!.Contains("y"))
-                        {
-                            Player.Money = Player.Money - Pokemon[box].Value;
-                            Pokemon[box].Sold = true;
-                            Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Pokemon[box].Name}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Te has de enfrentar a {Pokemon[box].Name}. Tira el dado ");
-                        ToPay = FVariousFunctions.LanzarDado() * Pokemon[box].Value;
-                        Console.WriteLine("Tienes que pagar: " + ToPay.ToString());
-
-                    }
-
-                    break;
+                
+                
             }
-            Console.WriteLine($"El jugador {Player.Name} tiene un total de {Player.Money} Pokemonedas");
+
+
+            
         }
+
 
 
         /// <summary>
