@@ -7,33 +7,33 @@
 	</Players>
 
 	<Pokemons>
-		<Pokemon Name="Chikorita" 		Value="1"	Sold="false"	MaxNum = "6" 	Color="Brown" />
-		<Pokemon Name="Cyndaquil" 		Value="2"	Sold="false"	MaxNum = "6" 	Color="Brown" />
-		<Pokemon Name="Totodile" 		Value="3"	Sold="false"	MaxNum = "6" 	Color="SkyBlue" />
-		<Pokemon Name="Sentret" 		Value="4"	Sold="false"	MaxNum = "6" 	Color="SkyBlue" />
-		<Pokemon Name="Furret" 			Value="5"	Sold="false"	MaxNum = "6" 	Color="SkyBlue" />
-		<Pokemon Name="Hoothoot" 		Value="6"	Sold="false"	MaxNum = "6" 	Color="Pink" />
-		<Pokemon Name="Noctowl" 		Value="7"	Sold="false"	MaxNum = "6" 	Color="Pink" />
-		<Pokemon Name="Ledyba" 			Value="8"	Sold="false"	MaxNum = "6" 	Color="Pink" />
-		<Pokemon Name="Ledian" 			Value="9"	Sold="false"	MaxNum = "6" 	Color="Orange" />
-		<Pokemon Name="Spinarak" 		Value="10"	Sold="false"	MaxNum = "6" 	Color="Orange" />
-		<Pokemon Name="Ariados" 		Value="11"	Sold="false"	MaxNum = "6" 	Color="Orange" />
-		<Pokemon Name="Crobat" 			Value="12"	Sold="false"	MaxNum = "6" 	Color="Red" />
-		<Pokemon Name="Chinchou" 		Value="13"	Sold="false"	MaxNum = "6" 	Color="Red" />
-		<Pokemon Name="Lanturn" 		Value="14"	Sold="false"	MaxNum = "6" 	Color="Red" />
-		<Pokemon Name="Pichu" 			Value="15"	Sold="false"	MaxNum = "6" 	Color="Yellow" />
-		<Pokemon Name="Cleffa" 			Value="16"	Sold="false"	MaxNum = "6" 	Color="Yellow" />
-		<Pokemon Name="Igglybuff" 		Value="17"	Sold="false"	MaxNum = "6" 	Color="Yellow" />
-		<Pokemon Name="Togepi" 			Value="18"	Sold="false"	MaxNum = "6" 	Color="Green" />
-		<Pokemon Name="Togetic" 		Value="19"	Sold="false"	MaxNum = "6" 	Color="Green" />
-		<Pokemon Name="Natu" 			Value="20"	Sold="false"	MaxNum = "6" 	Color="Green" />
-		<Pokemon Name="Xatu" 			Value="21"	Sold="false"	MaxNum = "6" 	Color="Blue" />
-		<Pokemon Name="Suicune" 		Value="22"	Sold="false"	MaxNum = "6" 	Color="Blue" />
-		<Pokemon Name="Raikou" 			Value="23"	Sold="false"	MaxNum = "6" 	Color="Green" />
-		<Pokemon Name="Entei" 			Value="24"	Sold="false"	MaxNum = "6" 	Color="Green" />
-		<Pokemon Name="Ho-Ho" 			Value="25"	Sold="false"	MaxNum = "6" 	Color="Green" />
-		<Pokemon Name="Lugia" 			Value="26"	Sold="false"	MaxNum = "6" 	Color="Blue" />
-		<Pokemon Name="Celebi" 			Value="27"	Sold="false"	MaxNum = "6" 	Color="Blue" />
+		<Pokemon Name="Chikorita" 		Value="1"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
+		<Pokemon Name="Cyndaquil" 		Value="2"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
+		<Pokemon Name="Totodile" 		Value="3"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
+		<Pokemon Name="Sentret" 		Value="4"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
+		<Pokemon Name="Furret" 			Value="5"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
+		<Pokemon Name="Hoothoot" 		Value="6"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
+		<Pokemon Name="Noctowl" 		Value="7"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
+		<Pokemon Name="Ledyba" 			Value="8"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
+		<Pokemon Name="Ledian" 			Value="9"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
+		<Pokemon Name="Spinarak" 		Value="10"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
+		<Pokemon Name="Ariados" 		Value="11"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
+		<Pokemon Name="Crobat" 			Value="12"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
+		<Pokemon Name="Chinchou" 		Value="13"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
+		<Pokemon Name="Lanturn" 		Value="14"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
+		<Pokemon Name="Pichu" 			Value="15"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
+		<Pokemon Name="Cleffa" 			Value="16"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
+		<Pokemon Name="Igglybuff" 		Value="17"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
+		<Pokemon Name="Togepi" 			Value="18"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Togetic" 		Value="19"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Natu" 			Value="20"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Xatu" 			Value="21"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
+		<Pokemon Name="Suicune" 		Value="22"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
+		<Pokemon Name="Raikou" 			Value="23"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Entei" 			Value="24"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Ho-Ho" 			Value="25"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Lugia" 			Value="26"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
+		<Pokemon Name="Celebi" 			Value="27"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
 	 </Pokemons>
 	 
 	 

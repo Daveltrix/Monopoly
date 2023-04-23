@@ -11,7 +11,7 @@ namespace Monopoly
     {
         private Int32 _mIndex;
         private Int32 _mToPay;
-        private CPlayers _mTrainer;
+        private CPlayers? _mTrainer;
 
         public Game_Loop() {}
 
@@ -38,7 +38,8 @@ namespace Monopoly
                     {
                         Setup._LPokemon[_mIndex].Trainer = Player.Name;
                         Player.Money = Player.Money - Setup._LPokemon[_mIndex].Value;
-                        Setup._LPokemon[Setup._LBoxes[Player.Box].BoxPoke].Sold = true;
+                        Setup._LPokemon[_mIndex].Sold = true;
+                        Setup._LPokemon[_mIndex].Level++ ;
                         Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Setup._LPokemon[_mIndex].Name}");
                     }
                 }
@@ -46,6 +47,19 @@ namespace Monopoly
                 else if ((Setup._LPokemon[_mIndex].Sold == true) && (Player.Name == Setup._LPokemon[_mIndex].Trainer)) // Si tengo al pokemon
                 {
                     Console.WriteLine("Este pokemon ya lo tienes registrado en la pokedex. Sigue tu aventura");
+                    Console.WriteLine($"¿Quieres darle un caramelo raro a tu Pokemon {Setup._LPokemon[_mIndex].Name}");
+                    String? answer = Console.ReadLine();
+                    if (answer!.Contains("y"))
+                    {
+                        _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Value;
+                        Player.Money = Player.Money - _mToPay;
+                        Setup._LPokemon[_mIndex].Level++;
+                        Console.WriteLine($"El pokemon {Setup._LPokemon[_mIndex].Name} ha subido de nivel al {Setup._LPokemon[_mIndex].Level.ToString()}");
+                        //Setup._LPokemon[_mIndex].Trainer = Player.Name;
+                        //Player.Money = Player.Money - Setup._LPokemon[_mIndex].Value;
+                        //Setup._LPokemon[Setup._LBoxes[Player.Box].BoxPoke].Sold = true;
+                        //Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Setup._LPokemon[_mIndex].Name}");
+                    }
                 }
 
                 else // No tengo al pokemon y hay que pagar

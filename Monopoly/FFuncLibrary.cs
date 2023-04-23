@@ -48,8 +48,10 @@ namespace Monopoly
                 String Value    =   pokemonNode.Attributes!["Value"]!.Value;
                 String Color    =   pokemonNode.Attributes!["Color"]!.Value;
                 String Sold     =   pokemonNode.Attributes!["Sold"]!.Value;
+                String Level    =   pokemonNode.Attributes!["Level"]!.Value;
+                String MaxNum   =   pokemonNode.Attributes!["MaxNum"]!.Value;
 
-                CPokemon Pokemon = new CPokemon (Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold));
+                CPokemon Pokemon = new CPokemon (Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold), Convert.ToInt32(Level), Convert.ToInt32(MaxNum));
                 SetUp.AddlistPokemons(Pokemon);
             }
             #endregion
@@ -77,7 +79,7 @@ namespace Monopoly
             {
                 if (String.IsNullOrEmpty(box.NameBox)) 
                 {
-                    box.NameBox = SetUp._LPokemon[index_pokemon].Name;
+                    box.NameBox = SetUp._LPokemon[index_pokemon].Name!;
                     index_pokemon++;
                 }
             }
