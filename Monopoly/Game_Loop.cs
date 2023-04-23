@@ -12,6 +12,7 @@ namespace Monopoly
         private Int32 _mIndex;
         private Int32 _mToPay;
         private CPlayers? _mTrainer;
+        private String? _mAnswer;
 
         public Game_Loop() {}
 
@@ -33,8 +34,8 @@ namespace Monopoly
                 if (Setup._LPokemon[_mIndex].Sold == false) // Si el pokemon esta libre
                 {
                     Console.WriteLine($"El pokemon {Setup._LBoxes[Player.Box].NameBox} se encuentra libre. ¿Deseas capturarlo?");
-                    String? answer = Console.ReadLine();
-                    if (answer!.Contains("y"))
+                    _mAnswer = Console.ReadLine();
+                    if (_mAnswer!.Contains("y"))
                     {
                         Setup._LPokemon[_mIndex].Trainer = Player.Name;
                         Player.Money = Player.Money - Setup._LPokemon[_mIndex].Value;
@@ -46,20 +47,26 @@ namespace Monopoly
 
                 else if ((Setup._LPokemon[_mIndex].Sold == true) && (Player.Name == Setup._LPokemon[_mIndex].Trainer)) // Si tengo al pokemon
                 {
-                    Console.WriteLine("Este pokemon ya lo tienes registrado en la pokedex. Sigue tu aventura");
-                    Console.WriteLine($"¿Quieres darle un caramelo raro a tu Pokemon {Setup._LPokemon[_mIndex].Name}");
-                    String? answer = Console.ReadLine();
-                    if (answer!.Contains("y"))
+                    Console.WriteLine($"Ya tienes registrado a {Setup._LPokemon[_mIndex].Name} en la pokedex. Sigue tu aventura");
+                    
+                    if (Setup._LPokemon[_mIndex].Level == Setup._LPokemon[_mIndex].MaxNum)
                     {
-                        _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Value;
-                        Player.Money = Player.Money - _mToPay;
-                        Setup._LPokemon[_mIndex].Level++;
-                        Console.WriteLine($"El pokemon {Setup._LPokemon[_mIndex].Name} ha subido de nivel al {Setup._LPokemon[_mIndex].Level.ToString()}");
-                        //Setup._LPokemon[_mIndex].Trainer = Player.Name;
-                        //Player.Money = Player.Money - Setup._LPokemon[_mIndex].Value;
-                        //Setup._LPokemon[Setup._LBoxes[Player.Box].BoxPoke].Sold = true;
-                        //Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Setup._LPokemon[_mIndex].Name}");
+                        Console.WriteLine($"El pokemon {Setup._LPokemon[_mIndex].Name} ya ha alcanzado el maximo nivel");
                     }
+                    else
+                    {
+                        _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Value * Setup._LPokemon[_mIndex].Level;
+                        Console.WriteLine($"¿Quieres darle un caramelo raro a tu Pokemon {Setup._LPokemon[_mIndex].Name}. Te saldria por {_mToPay.ToString()} Pokemonedas");
+                        _mAnswer = Console.ReadLine();
+                        if (_mAnswer!.Contains("y"))
+                        {
+                            
+                            Player.Money = Player.Money - _mToPay;
+                            Setup._LPokemon[_mIndex].Level++;
+                            Console.WriteLine($"El pokemon {Setup._LPokemon[_mIndex].Name} ha subido de nivel al {Setup._LPokemon[_mIndex].Level.ToString()}");
+                        }
+                    }
+                    
                 }
 
                 else // No tengo al pokemon y hay que pagar
@@ -69,18 +76,13 @@ namespace Monopoly
                     Console.WriteLine("El Pokemon pertenece al entrenador: " + Setup._LPokemon[_mIndex].Trainer);
                     Console.WriteLine($"Te has de enfrentar a {Setup._LPokemon[_mIndex].Name} del entrenador: {Setup._LPokemon[_mIndex].Trainer}");
 
-                    _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Value;
+                    _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Value * Setup._LPokemon[_mIndex].Level;
                     Player.Money = Player.Money - _mToPay;
                     _mTrainer.Money = _mTrainer.Money + _mToPay;
                     Console.WriteLine("Tienes que pagar: " + _mToPay.ToString() );
                     Console.WriteLine($"El entrenador {Player.Name} tiene {Player.Money}");
                     Console.WriteLine($"El entrenador del pokemon {_mTrainer.Name} tiene {_mTrainer.Money}");
-
-
                 }
-
-                
-                
             }
 
 

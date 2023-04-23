@@ -52,28 +52,26 @@ namespace Monopoly
                         
                     }
                 }
-                Console.WriteLine("¿Desea ver estado de la partida?");
-                consola = Console.ReadLine();
-                if (consola!.Contains("y"))
-                {
-                    while(true)
-                    {
-                        Console.WriteLine("Introduce comando");
-                        FVariousFunctions.ShowCommandsConsole();
-                        comando = Console.ReadLine();
-                        if (comando!.Contains("continue"))
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            Game_Loop.State_Game(comando, Setup);
-                        }
+                //Console.WriteLine("¿Desea ver estado de la partida?");
+                //consola = Console.ReadLine();
+                //if (consola!.Contains("y"))
+                //{
+                //    while(true)
+                //    {
+                //        Console.WriteLine("Introduce comando");
+                //        FVariousFunctions.ShowCommandsConsole();
+                //        comando = Console.ReadLine();
+                //        if (comando!.Contains("continue"))
+                //        {
+                //            break;
+                //        }
+                //        else
+                //        {
+                //            Game_Loop.State_Game(comando, Setup);
+                //        }
                         
-                    }
-                    
-
-                }
+                //    }  
+                //}
 
             }
             
