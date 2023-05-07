@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\Repositorio\\MonopolyGame\\Monopoly\\Monopoly.csproj",
+      "projectUniqueName": "C:\\Repositorios\\Remotos\\Monopoly\\Monopoly\\Monopoly.csproj",
       "projectName": "Monopoly",
-      "projectPath": "C:\\Users\\Usuario\\Documents\\Repositorio\\MonopolyGame\\Monopoly\\Monopoly.csproj",
+      "projectPath": "C:\\Repositorios\\Remotos\\Monopoly\\Monopoly\\Monopoly.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Documents\\Repositorio\\MonopolyGame\\Monopoly\\obj\\",
+      "outputPath": "C:\\Repositorios\\Remotos\\Monopoly\\Monopoly\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
