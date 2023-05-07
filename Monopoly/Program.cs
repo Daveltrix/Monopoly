@@ -8,6 +8,7 @@ namespace Monopoly
         static void Main(string[] args)
         {
             Console.WriteLine("COMIENZA LA PARTIDA MAS DIVERTIDA DE TU VIDA: EL MONOPOLY");
+            Console.WriteLine("");
 
             #region CARGAR PARAMETROS
 
