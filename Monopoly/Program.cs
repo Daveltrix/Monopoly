@@ -12,6 +12,7 @@ namespace Monopoly
 
             #region CARGAR PARAMETROS
             String path_ied = "Game.ied";
+<<<<<<< HEAD
             CSetUp Setup = new CSetUp();
             CFuncLibrary _FuncLibrary = new CFuncLibrary();
             Setup = _FuncLibrary.Read_Xml(path_ied);
@@ -19,11 +20,20 @@ namespace Monopoly
             Int32 TotalBox = 3;
             String consola;
             String comando;
+=======
+            Game_SetUp Setup = new Game_SetUp();
+            Game_Loop _Game_Loop = new Game_Loop();
+            Setup = FFuncLibrary.Read_Xml(path_ied);
+            #endregion
+            Int32 TotalBox = 3;
+            String? consola;
+            String? comando;
+>>>>>>> Develop
 
             
             while(true)
             {
-                foreach(CPlayers Player in Setup._LClayers)
+                foreach(CPlayers Player in Setup._LPlayers)
                 {
                     Console.WriteLine("==============================================================");
                     Int32 Dice = FVariousFunctions.LanzarDado();
@@ -45,35 +55,34 @@ namespace Monopoly
                         Console.WriteLine($"Ha salido un: {Dice.ToString()}. El jugador {Player.Id} -->" +
                             $" {Player.Name} se encuentra en la casilla: {Player.Box}.");
 
-                        Game_Loop.Function_Loop(Player.Box, Player, Setup._LPokemon, Setup._LClayers);
+                        
+                        _Game_Loop.Function_proof(Player, Setup);
                         Console.WriteLine("==============================================================");
                         Console.WriteLine();
                         Console.WriteLine();
                         
                     }
                 }
-                Console.WriteLine("¿Desea ver estado de la partida?");
-                consola = Console.ReadLine();
-                if (consola.Contains("y"))
-                {
-                    while(true)
-                    {
-                        Console.WriteLine("Introduce comando");
-                        FVariousFunctions.ShowCommandsConsole();
-                        comando = Console.ReadLine();
-                        if (comando.Contains("continue"))
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            Game_Loop.State_Game(comando, Setup);
-                        }
+                //Console.WriteLine("¿Desea ver estado de la partida?");
+                //consola = Console.ReadLine();
+                //if (consola!.Contains("y"))
+                //{
+                //    while(true)
+                //    {
+                //        Console.WriteLine("Introduce comando");
+                //        FVariousFunctions.ShowCommandsConsole();
+                //        comando = Console.ReadLine();
+                //        if (comando!.Contains("continue"))
+                //        {
+                //            break;
+                //        }
+                //        else
+                //        {
+                //            Game_Loop.State_Game(comando, Setup);
+                //        }
                         
-                    }
-                    
-
-                }
+                //    }  
+                //}
 
             }
             
@@ -82,8 +91,8 @@ namespace Monopoly
 
 
 
-            Console.WriteLine("Authors: PASCUAL Y JAIME");
-            Console.ReadKey();
+            //Console.WriteLine("Authors: PASCUAL Y JAIME");
+            //Console.ReadKey();
         }
     }
 }
