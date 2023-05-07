@@ -8,19 +8,9 @@ namespace Monopoly
         static void Main(string[] args)
         {
             Console.WriteLine("COMIENZA LA PARTIDA MAS DIVERTIDA DE TU VIDA: EL MONOPOLY");
-            Console.WriteLine();
 
             #region CARGAR PARAMETROS
             String path_ied = "Game.ied";
-<<<<<<< HEAD
-            CSetUp Setup = new CSetUp();
-            CFuncLibrary _FuncLibrary = new CFuncLibrary();
-            Setup = _FuncLibrary.Read_Xml(path_ied);
-            #endregion
-            Int32 TotalBox = 3;
-            String consola;
-            String comando;
-=======
             Game_SetUp Setup = new Game_SetUp();
             Game_Loop _Game_Loop = new Game_Loop();
             Setup = FFuncLibrary.Read_Xml(path_ied);
@@ -28,7 +18,6 @@ namespace Monopoly
             Int32 TotalBox = 3;
             String? consola;
             String? comando;
->>>>>>> Develop
 
             
             while(true)
