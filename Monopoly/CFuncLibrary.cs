@@ -14,7 +14,7 @@ namespace Monopoly
         /// </summary>
         /// <param name="path_ied"></param> Nombre del archivo .ied
         /// <returns></returns> Se retornan un objeto con listas en funcion del archivo ied
-        public static CSetUp Read_Xml(String path_ied)
+        public CSetUp Read_Xml(String path_ied)
         {
             #region INICIALIZATE
             CSetUp SetUp = new CSetUp();

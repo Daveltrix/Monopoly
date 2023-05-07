@@ -12,34 +12,12 @@ namespace Monopoly
             #region CARGAR PARAMETROS
             String path_ied = "Game.ied";
             CSetUp Setup = new CSetUp();
-            Setup = CFuncLibrary.Read_Xml(path_ied);
+            CFuncLibrary _FuncLibrary = new CFuncLibrary();
+            Setup = _FuncLibrary.Read_Xml(path_ied);
             #endregion
             Int32 TotalBox = 3;
             String consola;
             String comando;
-
-            Int32 prueba = 0;
-            Int32 dado = 0;
-            
-            //while(true)
-            //{
-            //    dado = FVariousFunctions.LanzarDado();
-            //    prueba = prueba + dado;
-                
-
-            //    if (prueba >= 39)
-            //    {
-            //        prueba = 0 + prueba - 39;
-            //    }
-            //    Console.WriteLine(dado.ToString() +"       "+prueba.ToString());
-            //    string salir = Console.ReadLine();
-            //    if (salir.Contains("a"))
-            //    {
-            //        break;
-            //    }
-            //}
-
-
 
             
             while(true)
