@@ -14,17 +14,16 @@ namespace Monopoly
         private CPlayers? _mTrainer;
         private String? _mAnswer;
 
+
         public Game_Loop() {}
 
-        /// <summary>
-        /// Funcion que depende de la casilla donde estes realices una funcion
-        /// </summary>
-        /// <param name="box"></param>
-        /// <param name="Player"></param>
-        /// <param name="Pokemon"></param>
-        /// <param name="_lPlayer"></param>
-        /// 
 
+        /// <summary>
+        /// Executes a specific action depending on the current game box where the player is located.
+        /// </summary>
+        /// <param name="Player">The player instance.</param>
+        /// <param name="Setup">The game setup instance.</param>
+        
         public void Function_proof(CPlayers Player, Game_SetUp Setup)
         {
             _mIndex = Setup._LBoxes[Player.Box].BoxPoke;
@@ -84,19 +83,15 @@ namespace Monopoly
                     Console.WriteLine($"El entrenador del pokemon {_mTrainer.Name} tiene {_mTrainer.Money}");
                 }
             }
-
-
-            
         }
 
-
-
         /// <summary>
-        /// Funcion para desplegar el menu en la consola
+        /// Retrieves and displays the current state of the game based on the specified command.
         /// </summary>
-        /// <param name="comand"></param>
-        /// <param name="Setup"></param>
-        /// <returns></returns>
+        /// <param name="comand">Specific command of the game.</param>
+        /// <param name="Setup">Instance of the Game_SetUp class containing game data.</param>
+        /// <returns>The resulting integer value.</returns>
+
         public static Int32 State_Game(String comand, Game_SetUp Setup)
         {
             Int32 num_return = 0;

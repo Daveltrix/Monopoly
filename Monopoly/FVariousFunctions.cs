@@ -6,16 +6,30 @@ using System.Threading.Tasks;
 
 namespace Monopoly
 {
+    /// <summary>
+    /// Provides various utility functions for Monopoly.
+    /// </summary>
+
     public class FVariousFunctions
     {
+        #region CONSTRUCTOR
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FVariousFunctions"/> class.
+        /// </summary>
+
         public FVariousFunctions() { }
 
+        #endregion
+
+
+        #region FUNCTIONS
 
         /// <summary>
-        /// Funcion que simula un lanzamiento de un dado
+        /// Simulates rolling a die.
         /// </summary>
-        /// <returns></returns>
-        public static Int32 LanzarDado()
+        /// <returns>The result of the die roll.</returns>
+
+        public static int LanzarDado()
         {
             Random rnd = new Random();
             int RandomNumber = rnd.Next(1, 7);
@@ -24,13 +38,15 @@ namespace Monopoly
         }
 
         /// <summary>
-        /// Muestra por consola los comandos que hay
+        /// Displays the available commands on the console.
         /// </summary>
+        
         public static void ShowCommandsConsole()
         {
             Console.WriteLine("Opcion1: Estado");
             Console.WriteLine("Opcion2: Pokemons");
             Console.WriteLine("Opcion3: Continue");
         }
+        #endregion
     }
 }

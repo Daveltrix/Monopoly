@@ -10,22 +10,28 @@ namespace Monopoly
             Console.WriteLine("COMIENZA LA PARTIDA MAS DIVERTIDA DE TU VIDA: EL MONOPOLY");
 
             #region CARGAR PARAMETROS
+
+            // Paht
             String path_ied = "Game.ied";
-            Game_SetUp Setup = new Game_SetUp();
+
+            // Para guardar las listas
+            Game_SetUp Setup = new Game_SetUp(path_ied);
+
+            // Para comenzar el juego
             Game_Loop _Game_Loop = new Game_Loop();
-            Setup = FFuncLibrary.Read_Xml(path_ied);
+
             #endregion
             Int32 TotalBox = 3;
-            String? consola;
-            String? comando;
+            Int32 Dice;
 
-            
-            while(true)
+
+
+            while (true)
             {
                 foreach(CPlayers Player in Setup._LPlayers)
                 {
                     Console.WriteLine("==============================================================");
-                    Int32 Dice = FVariousFunctions.LanzarDado();
+                    Dice = FVariousFunctions.LanzarDado();
                     if (((Player.Box == 15) || (Player.Box == 16) || (Player.Box == 17)) && Player.Turn == true)
                     {
                         Player.Turn = false;
