@@ -6,6 +6,9 @@
 	  <player Name="Txema" 		Id="3" 		Money="3000"	Turn= "True"	Box="0"		Figure="Pez"/>
 	</Players>
 
+
+
+
 	<Pokemons>
 		<Pokemon Name="Chikorita" 		Value="1"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
 		<Attacks>
