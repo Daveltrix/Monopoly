@@ -8,32 +8,248 @@
 
 	<Pokemons>
 		<Pokemon Name="Chikorita" 		Value="1"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Cyndaquil" 		Value="2"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Totodile" 		Value="3"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Sentret" 		Value="4"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Furret" 			Value="5"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Hoothoot" 		Value="6"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Noctowl" 		Value="7"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Ledyba" 			Value="8"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Ledian" 			Value="9"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Spinarak" 		Value="10"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Ariados" 		Value="11"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Crobat" 			Value="12"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Chinchou" 		Value="13"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Lanturn" 		Value="14"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Pichu" 			Value="15"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Cleffa" 			Value="16"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Igglybuff" 		Value="17"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Togepi" 			Value="18"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Togetic" 		Value="19"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Natu" 			Value="20"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Xatu" 			Value="21"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Suicune" 		Value="22"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Raikou" 			Value="23"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Entei" 			Value="24"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Ho-Ho" 			Value="25"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Lugia" 			Value="26"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 		<Pokemon Name="Celebi" 			Value="27"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
+		<Attacks>
+			<Attack Name="Ataque 1" Type="Grass" Power="40" />
+			<Attack Name="Ataque 2" Type="Normal" Power="30" />
+			<Attack Name="Ataque 3" Type="Grass" Power="50" />
+			<Attack Name="Ataque 4" Type="Poison" Power="35" />
+			<Attack Name="Ataque 5" Type="Grass" Power="60" />
+			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+		</Attacks>
 	 </Pokemons>
 	 
 	 
