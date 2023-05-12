@@ -46,7 +46,7 @@ namespace Monopoly
                         if (Player.Box >= TotalBox)
                         {
                             Player.Box = Player.Box - TotalBox;
-                            Player.Money = Player.Money + 100;
+                            Player.Money = Player.Money + 1;
                         }
                         Console.WriteLine($"Ha salido un: {Dice.ToString()}. El jugador {Player.Id} -->" +
                             $" {Player.Name} se encuentra en la casilla: {Player.Box}.");
@@ -56,9 +56,19 @@ namespace Monopoly
                         Console.WriteLine("==============================================================");
                         Console.WriteLine();
                         Console.WriteLine();
-                        
+                        Console.WriteLine();
+                        Console.WriteLine();
+
                     }
                 }
+                for (int i = 0; i < Setup._LPlayers.Count; i++)
+                {
+                    if (Setup._LPlayers[i].Money <= 0)
+                    {
+                        Setup._LPlayers.RemoveAt(i);
+                    }
+                }
+                
                 //Console.WriteLine("¿Desea ver estado de la partida?");
                 //consola = Console.ReadLine();
                 //if (consola!.Contains("y"))
@@ -76,13 +86,13 @@ namespace Monopoly
                 //        {
                 //            Game_Loop.State_Game(comando, Setup);
                 //        }
-                        
+
                 //    }  
                 //}
 
             }
-            
-            
+
+
 
 
 
