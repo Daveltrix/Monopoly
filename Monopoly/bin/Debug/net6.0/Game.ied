@@ -9,12 +9,12 @@
 	<Pokemons>
 		<Pokemon Name="Chikorita" 		Value="1"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
 		<Attacks>
-			<Attack Name="Ataque 1" Type="Grass" Power="40" />
-			<Attack Name="Ataque 2" Type="Normal" Power="30" />
-			<Attack Name="Ataque 3" Type="Grass" Power="50" />
-			<Attack Name="Ataque 4" Type="Poison" Power="35" />
-			<Attack Name="Ataque 5" Type="Grass" Power="60" />
-			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+			<Attack Name="Placaje" Type="Grass" Power="40" />
+			<Attack Name="Gruñido" Type="Normal" Power="30" />
+			<Attack Name="Latigo cepa" Type="Grass" Power="50" />
+			<Attack Name="Hoja afilada" Type="Poison" Power="35" />
+			<Attack Name="Drenadoras" Type="Grass" Power="60" />
+			<Attack Name="Rayo Solar" Type="Grass" Power="70" />
 		</Attacks>
 		<Pokemon Name="Cyndaquil" 		Value="2"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
 		<Attacks>
