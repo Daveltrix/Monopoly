@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
@@ -13,6 +14,8 @@ namespace Monopoly
         private Int32 _mToPay;
         private CPlayers? _mTrainer;
         private String? _mAnswer;
+        private Int32 _mlevel;
+        private Int32 _mlevellist;
 
 
         public Game_Loop() {}
@@ -27,17 +30,22 @@ namespace Monopoly
         public void Function_proof(CPlayers Player, Game_SetUp Setup)
         {
             _mIndex = Setup._LBoxes[Player.Box].BoxPoke;
-            
+            _mlevel = Setup._LPokemon[_mIndex].Level;
+            _mlevellist = _mlevel - 1;
+
+
             if (Setup._LBoxes[Player.Box].BoxType.Contains("Pokemon"))
             {
                 if (Setup._LPokemon[_mIndex].Sold == false) // Si el pokemon esta libre
                 {
+                    _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Attacks![_mlevellist].Power;
                     Console.WriteLine($"El pokemon {Setup._LBoxes[Player.Box].NameBox} se encuentra libre. ¿Deseas capturarlo?");
+                    Console.WriteLine($"Te saldria por {_mToPay} Pokemonedas");
                     _mAnswer = Console.ReadLine();
                     if (_mAnswer!.Contains("y"))
                     {
                         Setup._LPokemon[_mIndex].Trainer = Player.Name;
-                        Player.Money = Player.Money - Setup._LPokemon[_mIndex].Value;
+                        Player.Money = Player.Money - _mToPay;
                         Setup._LPokemon[_mIndex].Sold = true;
                         Setup._LPokemon[_mIndex].Level++ ;
                         Console.WriteLine($"El jugador {Player.Name} ha capturado el Pokemon salvaje: {Setup._LPokemon[_mIndex].Name}");
@@ -48,13 +56,13 @@ namespace Monopoly
                 {
                     Console.WriteLine($"Ya tienes registrado a {Setup._LPokemon[_mIndex].Name} en la pokedex. Sigue tu aventura");
                     
-                    if (Setup._LPokemon[_mIndex].Level == Setup._LPokemon[_mIndex].MaxNum)
+                    if (_mlevel == Setup._LPokemon[_mIndex].Attacks!.Count())
                     {
                         Console.WriteLine($"El pokemon {Setup._LPokemon[_mIndex].Name} ya ha alcanzado el maximo nivel");
                     }
                     else
                     {
-                        _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Value * Setup._LPokemon[_mIndex].Level;
+                        _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Attacks![_mlevellist].Power;
                         Console.WriteLine($"¿Quieres darle un caramelo raro a tu Pokemon {Setup._LPokemon[_mIndex].Name}. Te saldria por {_mToPay.ToString()} Pokemonedas");
                         _mAnswer = Console.ReadLine();
                         if (_mAnswer!.Contains("y"))
@@ -75,12 +83,15 @@ namespace Monopoly
                     Console.WriteLine("El Pokemon pertenece al entrenador: " + Setup._LPokemon[_mIndex].Trainer);
                     Console.WriteLine($"Te has de enfrentar a {Setup._LPokemon[_mIndex].Name} del entrenador: {Setup._LPokemon[_mIndex].Trainer}");
 
-                    _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Value * Setup._LPokemon[_mIndex].Level;
+                    _mToPay = FVariousFunctions.LanzarDado() * Setup._LPokemon[_mIndex].Attacks![_mlevellist].Power;
+
                     Player.Money = Player.Money - _mToPay;
                     _mTrainer.Money = _mTrainer.Money + _mToPay;
-                    Console.WriteLine("Tienes que pagar: " + _mToPay.ToString() );
+                    Console.WriteLine("Tienes que pagar: " + _mToPay.ToString());
                     Console.WriteLine($"El entrenador {Player.Name} tiene {Player.Money}");
                     Console.WriteLine($"El entrenador del pokemon {_mTrainer.Name} tiene {_mTrainer.Money}");
+                    
+                    
                 }
             }
         }
