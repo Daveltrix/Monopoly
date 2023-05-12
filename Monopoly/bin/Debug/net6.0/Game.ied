@@ -9,6 +9,7 @@
 
 
 
+
 	<Pokemons>
 		<Pokemon Name="Chikorita" 		Value="1"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
 		<Attacks>
