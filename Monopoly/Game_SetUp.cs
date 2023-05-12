@@ -60,7 +60,7 @@ namespace Monopoly
         /// Gets or sets the list of attack.
         /// </summary>
         /// 
-        public List<CAttack> _LAttack { get; private set; }
+        public List<CAttack>? _LAttack { get; private set; }
 
 
         #endregion
@@ -117,7 +117,7 @@ namespace Monopoly
 
         private void AddlistAttack(CAttack Attack)
         {
-            _LAttack.Add(Attack);
+            _LAttack!.Add(Attack);
         }
 
         #endregion
@@ -171,7 +171,7 @@ namespace Monopoly
                     String NameAttack = attackNode.Attributes!["Name"]!.Value;
                     String Type = attackNode.Attributes!["Type"]!.Value;
                     String Power = attackNode.Attributes!["Power"]!.Value;
-                    CAttack Attack = new CAttack(NameAttack, Type, Power);
+                    CAttack Attack = new CAttack(NameAttack, Type, Convert.ToInt32(Power));
 
                     AddlistAttack(Attack);
 

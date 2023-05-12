@@ -10,11 +10,11 @@ namespace Monopoly
     {
         public String? NameAttack { get; set; }
         public String? Type { get; set; }
-        public String? Power { get; set; }
+        public Int32 Power { get; set; }
 
         public CAttack() { }
 
-        public CAttack(String _mNameAttack, String _mType, String _mPower) 
+        public CAttack(String _mNameAttack, String _mType, Int32 _mPower) 
         {
             this.NameAttack = _mNameAttack;
             this.Type = _mType;
