@@ -6,39 +6,33 @@
 	  <player Name="Txema" 		Id="3" 		Money="3000"	Turn= "True"	Box="0"		Figure="Pez"/>
 	</Players>
 
-
-
-
-
-
-
 	<Pokemons>
 		<Pokemon Name="Chikorita" 		Value="1"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
 		<Attacks>
 			<Attack Name="Placaje" Type="Grass" Power="40" />
 			<Attack Name="Gruñido" Type="Normal" Power="30" />
-			<Attack Name="Latigo cepa" Type="Grass" Power="50" />
-			<Attack Name="Hoja afilada" Type="Poison" Power="35" />
+			<Attack Name="Latigo Cepa" Type="Grass" Power="50" />
+			<Attack Name="Hoja Afijalda" Type="Poison" Power="35" />
 			<Attack Name="Drenadoras" Type="Grass" Power="60" />
 			<Attack Name="Rayo Solar" Type="Grass" Power="70" />
 		</Attacks>
 		<Pokemon Name="Cyndaquil" 		Value="2"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Brown" />
 		<Attacks>
-			<Attack Name="Ataque 1" Type="Grass" Power="40" />
-			<Attack Name="Ataque 2" Type="Normal" Power="30" />
-			<Attack Name="Ataque 3" Type="Grass" Power="50" />
-			<Attack Name="Ataque 4" Type="Poison" Power="35" />
-			<Attack Name="Ataque 5" Type="Grass" Power="60" />
-			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+			<Attack Name="Placaje" Type="Grass" Power="40" />
+			<Attack Name="Gruñido" Type="Normal" Power="30" />
+			<Attack Name="Ascuas" Type="Grass" Power="50" />
+			<Attack Name="Rueda fuego" Type="Poison" Power="35" />
+			<Attack Name="Rapidez" Type="Grass" Power="60" />
+			<Attack Name="Lanzallamas" Type="Grass" Power="70" />
 		</Attacks>
 		<Pokemon Name="Totodile" 		Value="3"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
 		<Attacks>
-			<Attack Name="Ataque 1" Type="Grass" Power="40" />
-			<Attack Name="Ataque 2" Type="Normal" Power="30" />
-			<Attack Name="Ataque 3" Type="Grass" Power="50" />
-			<Attack Name="Ataque 4" Type="Poison" Power="35" />
-			<Attack Name="Ataque 5" Type="Grass" Power="60" />
-			<Attack Name="Ataque 6" Type="Grass" Power="70" />
+			<Attack Name="Arañazo" Type="Grass" Power="40" />
+			<Attack Name="Latigo" Type="Normal" Power="30" />
+			<Attack Name="Pistola Agua" Type="Grass" Power="50" />
+			<Attack Name="Mordisco" Type="Poison" Power="35" />
+			<Attack Name="Furia" Type="Grass" Power="60" />
+			<Attack Name="Hidrobomba" Type="Grass" Power="70" />
 		</Attacks>
 		<Pokemon Name="Sentret" 		Value="4"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
 		<Attacks>
