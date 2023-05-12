@@ -26,6 +26,7 @@ namespace Monopoly
             _LPlayers = new List<CPlayers>();
             _LPokemon = new List<CPokemon>();
             _LBoxes = new List<CBox>();
+            
             Read_Xml(path);
         }
 
@@ -53,6 +54,13 @@ namespace Monopoly
         /// </summary>
         /// 
         public List<CBox> _LBoxes { get; set; }
+
+
+        /// <summary>
+        /// Gets or sets the list of attack.
+        /// </summary>
+        /// 
+        public List<CAttack> _LAttack { get; private set; }
 
 
         #endregion
@@ -102,6 +110,16 @@ namespace Monopoly
             _LBoxes.Add(Box);
         }
 
+        /// <summary>
+        /// Adds a attack to the list of attack.
+        /// </summary>
+        /// <param name="Attack">The attack to add.</param>
+
+        private void AddlistAttack(CAttack Attack)
+        {
+            _LAttack.Add(Attack);
+        }
+
         #endregion
 
 
@@ -124,12 +142,12 @@ namespace Monopoly
             XmlNodeList? playerNodes = xmlDoc.SelectNodes("//player");
             foreach (XmlNode playerNode in playerNodes!)
             {
-                string Name = playerNode.Attributes!["Name"]!.Value;
-                string Id = playerNode.Attributes!["Id"]!.Value;
-                string Money = playerNode.Attributes!["Money"]!.Value;
-                string Figure = playerNode.Attributes!["Figure"]!.Value;
-                string Turn = playerNode.Attributes!["Turn"]!.Value;
-                string Box = playerNode.Attributes!["Box"]!.Value;
+                String Name = playerNode.Attributes!["Name"]!.Value;
+                String Id = playerNode.Attributes!["Id"]!.Value;
+                String Money = playerNode.Attributes!["Money"]!.Value;
+                String Figure = playerNode.Attributes!["Figure"]!.Value;
+                String Turn = playerNode.Attributes!["Turn"]!.Value;
+                String Box = playerNode.Attributes!["Box"]!.Value;
 
                 CPlayers players = new CPlayers(Name, Convert.ToInt32(Id), Convert.ToInt32(Money), Figure, Convert.ToBoolean(Turn), Convert.ToInt32(Box));
                 AddlistPlayers(players);
@@ -140,15 +158,27 @@ namespace Monopoly
             XmlNodeList? NodePokemon = xmlDoc.SelectNodes("//Pokemon");
             foreach (XmlNode pokemonNode in NodePokemon!)
             {
-                string Name = pokemonNode.Attributes!["Name"]!.Value;
-                string Value = pokemonNode.Attributes!["Value"]!.Value;
-                string Color = pokemonNode.Attributes!["Color"]!.Value;
-                string Sold = pokemonNode.Attributes!["Sold"]!.Value;
-                string Level = pokemonNode.Attributes!["Level"]!.Value;
-                string MaxNum = pokemonNode.Attributes!["MaxNum"]!.Value;
+                String Name = pokemonNode.Attributes!["Name"]!.Value;
+                String Value = pokemonNode.Attributes!["Value"]!.Value;
+                String Color = pokemonNode.Attributes!["Color"]!.Value;
+                String Sold = pokemonNode.Attributes!["Sold"]!.Value;
+                String Level = pokemonNode.Attributes!["Level"]!.Value;
+                String MaxNum = pokemonNode.Attributes!["MaxNum"]!.Value;
+                _LAttack = new List<CAttack>();
 
-                CPokemon Pokemon = new CPokemon(Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold), Convert.ToInt32(Level), Convert.ToInt32(MaxNum));
-               
+                foreach (XmlNode attackNode in pokemonNode.NextSibling!)
+                {
+                    String NameAttack = attackNode.Attributes!["Name"]!.Value;
+                    String Type = attackNode.Attributes!["Type"]!.Value;
+                    String Power = attackNode.Attributes!["Power"]!.Value;
+                    CAttack Attack = new CAttack(NameAttack, Type, Power);
+
+                    AddlistAttack(Attack);
+
+                }
+
+                CPokemon Pokemon = new CPokemon(Name, Convert.ToInt32(Value), Color, Convert.ToBoolean(Sold), Convert.ToInt32(Level), Convert.ToInt32(MaxNum), _LAttack);
+                
                 AddlistPokemons(Pokemon);
             }
 
@@ -158,11 +188,11 @@ namespace Monopoly
             XmlNodeList? NodeBoxes = xmlDoc.SelectNodes("//Box");
             foreach (XmlNode boxNode in NodeBoxes!)
             {
-                string Name = boxNode.Attributes!["Name"]!.Value;
-                string Position = boxNode.Attributes!["position"]!.Value;
-                string NameBox = boxNode.Attributes!["NameBox"]!.Value;
-                string BoxType = boxNode.Attributes!["BoxType"]!.Value;
-                string BoxPoke = boxNode.Attributes!["BoxPoke"]!.Value;
+                String Name = boxNode.Attributes!["Name"]!.Value;
+                String Position = boxNode.Attributes!["position"]!.Value;
+                String NameBox = boxNode.Attributes!["NameBox"]!.Value;
+                String BoxType = boxNode.Attributes!["BoxType"]!.Value;
+                String BoxPoke = boxNode.Attributes!["BoxPoke"]!.Value;
 
                 CBox Box = new CBox(Name, Convert.ToInt32(Position), NameBox, BoxType, Convert.ToInt32(BoxPoke));
                 AddlistBox(Box);

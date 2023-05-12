@@ -15,10 +15,11 @@ namespace Monopoly
         public String? Trainer { get; set; }
         public Int32 Level { get; set; }
         public Int32 MaxNum { get; set; }
+        public List<CAttack>? Attacks { get; set; }
 
         public CPokemon() { }
 
-        public CPokemon (String _mName, Int32 _mValue, String _mColor, Boolean _mSold, Int32 _mLevel, Int32 _mMaxNum )
+        public CPokemon (String _mName, Int32 _mValue, String _mColor, Boolean _mSold, Int32 _mLevel, Int32 _mMaxNum, List<CAttack> _listAttack)
         {
             this.Name = _mName;
             this.Value = _mValue;
@@ -26,6 +27,8 @@ namespace Monopoly
             this.Sold = _mSold;
             this.Level = _mLevel;
             this.MaxNum = _mMaxNum;
+            this.Attacks = _listAttack;
         }
+
     }
 }
