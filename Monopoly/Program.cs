@@ -61,13 +61,7 @@ namespace Monopoly
 
                     }
                 }
-                for (int i = 0; i < Setup._LPlayers.Count; i++)
-                {
-                    if (Setup._LPlayers[i].Money <= 0)
-                    {
-                        Setup._LPlayers.RemoveAt(i);
-                    }
-                }
+                Setup = FVariousFunctions.DeletePlayer(Setup);
                 
                 //Console.WriteLine("¿Desea ver estado de la partida?");
                 //consola = Console.ReadLine();

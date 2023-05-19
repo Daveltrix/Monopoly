@@ -47,6 +47,20 @@ namespace Monopoly
             Console.WriteLine("Opcion2: Pokemons");
             Console.WriteLine("Opcion3: Continue");
         }
+
+
+        public static Game_SetUp DeletePlayer(Game_SetUp Setup)
+        {
+            for (int i = 0; i < Setup._LPlayers.Count; i++)
+            {
+                if (Setup._LPlayers[i].Money <= 0)
+                {
+                    Setup._LPlayers.RemoveAt(i);
+                    Console.WriteLine($"El jugador {Setup._LPlayers[i].Name} ha sido eliminado");
+                }
+            }
+            return Setup;
+        }
         #endregion
     }
 }
