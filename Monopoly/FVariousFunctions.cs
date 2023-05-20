@@ -55,8 +55,8 @@ namespace Monopoly
             {
                 if (Setup._LPlayers[i].Money <= 0)
                 {
-                    Setup._LPlayers.RemoveAt(i);
                     Console.WriteLine($"El jugador {Setup._LPlayers[i].Name} ha sido eliminado");
+                    Setup._LPlayers.RemoveAt(i);                    
                 }
             }
             return Setup;

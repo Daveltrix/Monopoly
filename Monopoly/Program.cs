@@ -21,6 +21,8 @@ namespace Monopoly
             // Para comenzar el juego
             Game_Loop _Game_Loop = new Game_Loop();
 
+            CPlayers Player = new CPlayers();
+
             #endregion
             Int32 TotalBox = 3;
             Int32 Dice;
@@ -29,8 +31,10 @@ namespace Monopoly
 
             while (true)
             {
-                foreach(CPlayers Player in Setup._LPlayers)
+                //foreach (CPlayers Player in Setup._LPlayers)
+                for (Int32 i = 0; i < Setup._LPlayers.Count; i++)
                 {
+                    Player = Setup._LPlayers[i];
                     Console.WriteLine("==============================================================");
                     Dice = FVariousFunctions.LanzarDado();
                     if (((Player.Box == 15) || (Player.Box == 16) || (Player.Box == 17)) && Player.Turn == true)
@@ -51,8 +55,14 @@ namespace Monopoly
                         Console.WriteLine($"Ha salido un: {Dice.ToString()}. El jugador {Player.Id} -->" +
                             $" {Player.Name} se encuentra en la casilla: {Player.Box}.");
 
-                        
+
                         _Game_Loop.Function_proof(Player, Setup);
+                        if (Player.Money <= 0)
+                        {
+                            Setup = FVariousFunctions.DeletePlayer(Setup);
+                            i=i-1; 
+                        }
+                            
                         Console.WriteLine("==============================================================");
                         Console.WriteLine();
                         Console.WriteLine();
@@ -60,9 +70,14 @@ namespace Monopoly
                         Console.WriteLine();
 
                     }
+                    
                 }
-                Setup = FVariousFunctions.DeletePlayer(Setup);
-                
+
+                if (Setup._LPlayers.Count == 1)
+                {
+                    break;
+                }
+
                 //Console.WriteLine("¿Desea ver estado de la partida?");
                 //consola = Console.ReadLine();
                 //if (consola!.Contains("y"))
@@ -90,9 +105,9 @@ namespace Monopoly
 
 
 
-
-            //Console.WriteLine("Authors: PASCUAL Y JAIME");
-            //Console.ReadKey();
+            Console.WriteLine($"Felicidades a {Setup._LPlayers[0].Name} por ganar la liga pokemon");
+            Console.WriteLine("Authors: PASCUAL Y JAIME");
+            Console.ReadKey();
         }
     }
 }

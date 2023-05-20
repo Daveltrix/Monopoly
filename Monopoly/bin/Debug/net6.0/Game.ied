@@ -3,7 +3,7 @@
 	<Players>
 	  <player Name="Jaime" 		Id="1" 		Money="1000"	Turn= "True"	Box="0"		Figure="Perro"/>
 	  <player Name="Pascual" 	Id="2" 		Money="2"	Turn= "True"	Box="0"		Figure="Gato"/>
-	  <player Name="Txema" 		Id="3" 		Money="3000"	Turn= "True"	Box="0"		Figure="Pez"/>
+	  <player Name="Txema" 		Id="3" 		Money="100"	Turn= "True"	Box="0"		Figure="Pez"/>
 	</Players>
 
 	<Pokemons>
