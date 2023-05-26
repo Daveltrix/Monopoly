@@ -33,8 +33,8 @@ namespace Monopoly
         {
             Random rnd = new Random();
             int RandomNumber = rnd.Next(1, 7);
-            //return RandomNumber;
-            return 1;
+            return RandomNumber;
+            //return 1;
         }
 
         /// <summary>

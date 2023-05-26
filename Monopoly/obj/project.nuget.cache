@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "300aKaoH+4BGFG+Jsw1rwLHsE3R3nh1qq63O9kZL+BBuMbYQ92HIjYuc7hcQZamcao1xMwhuK7EDVUCMB8opUw==",
+  "dgSpecHash": "Agl2ftP90pM5R/c2/1PBFy7FgIsC4XndxB7ZUoPFEwRKzKr+Zn0ZU8e4S+qsIUsV6yvJnVxMWy9EAhIsvWUjqA==",
   "success": true,
   "projectFilePath": "C:\\Repositorios\\Remotos\\Monopoly\\Monopoly\\Monopoly.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuario\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

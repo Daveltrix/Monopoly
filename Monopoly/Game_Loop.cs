@@ -27,7 +27,7 @@ namespace Monopoly
         /// <param name="Player">The player instance.</param>
         /// <param name="Setup">The game setup instance.</param>
         
-        public void Function_proof(CPlayers Player, Game_SetUp Setup)
+        public void CatchPokemon(CPlayers Player, Game_SetUp Setup)
         {
             _mIndex = Setup._LBoxes[Player.Box].BoxPoke;
             _mlevel = Setup._LPokemon[_mIndex].Level;

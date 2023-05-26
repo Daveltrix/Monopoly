@@ -24,7 +24,7 @@ namespace Monopoly
             CPlayers Player = new CPlayers();
 
             #endregion
-            Int32 TotalBox = 3;
+            Int32 TotalBox = Setup._LBoxes.Count;
             Int32 Dice;
 
 
@@ -36,33 +36,52 @@ namespace Monopoly
                 {
                     Player = Setup._LPlayers[i];
                     Console.WriteLine("==============================================================");
+
+                    // Lanzamiento del dado
                     Dice = FVariousFunctions.LanzarDado();
-                    if (((Player.Box == 15) || (Player.Box == 16) || (Player.Box == 17)) && Player.Turn == true)
+                    
+
+                    // Casillas especiales
+                    if (((Player.Box == 3) || (Player.Box == 4) || (Player.Box == 5)) && Player.Turn == true)
                     {
                         Player.Turn = false;
                         Console.WriteLine($"Ha caido en la carcel. El jugador {Player.Id} --> " +
                             $"{Player.Name} se encuentra en la carcel: {Player.Box}.");
                     }
+
+                    // Pokemon
                     else
                     {
                         Player.Turn = true;
                         Player.Box = Player.Box + Dice;
+
+                        // ¿Le hemos dado la vuelta al tablero?
                         if (Player.Box >= TotalBox)
                         {
                             Player.Box = Player.Box - TotalBox;
                             Player.Money = Player.Money + 1;
                         }
+
+
                         Console.WriteLine($"Ha salido un: {Dice.ToString()}. El jugador {Player.Id} -->" +
                             $" {Player.Name} se encuentra en la casilla: {Player.Box}.");
 
 
-                        _Game_Loop.Function_proof(Player, Setup);
+                        _Game_Loop.CatchPokemon(Player, Setup);
+
+                        Player.Turn = true;
+
+
+
                         if (Player.Money <= 0)
                         {
                             Setup = FVariousFunctions.DeletePlayer(Setup);
-                            i=i-1; 
+                            i = i - 1;
                         }
-                            
+
+
+
+
                         Console.WriteLine("==============================================================");
                         Console.WriteLine();
                         Console.WriteLine();
@@ -73,6 +92,8 @@ namespace Monopoly
                     
                 }
 
+
+                // Finish game
                 if (Setup._LPlayers.Count == 1)
                 {
                     break;
