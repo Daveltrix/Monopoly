@@ -28,3 +28,5 @@ C:\Repositorios\Remotos\Monopoly\Monopoly\obj\Debug\net6.0\refint\Monopoly.dll
 C:\Repositorios\Remotos\Monopoly\Monopoly\obj\Debug\net6.0\Monopoly.pdb
 C:\Repositorios\Remotos\Monopoly\Monopoly\obj\Debug\net6.0\Monopoly.genruntimeconfig.cache
 C:\Repositorios\Remotos\Monopoly\Monopoly\obj\Debug\net6.0\ref\Monopoly.dll
+C:\Repositorios\Remotos\Monopoly\Monopoly\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Repositorios\Remotos\Monopoly\Monopoly\obj\Debug\net6.0\Monopoly.csproj.CopyComplete
