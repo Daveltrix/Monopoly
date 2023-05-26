@@ -4,6 +4,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using static System.Net.WebRequestMethods;
 
 namespace Monopoly
 {
@@ -11,6 +12,7 @@ namespace Monopoly
     {
         private readonly List<CPlayers> players;
         private readonly HttpListener listener;
+        private String URL = "http://localhost:8080/";
 
         public WebServer(List<CPlayers> players)
         {
@@ -23,7 +25,7 @@ namespace Monopoly
             listener.Prefixes.Add("http://localhost:8080/"); // Establece la URL base del servidor
             listener.Start();
 
-            Console.WriteLine("Servidor web iniciado. Esperando conexiones...");
+            Console.WriteLine($"Servidor web iniciado: {URL}. Esperando conexiones...");
 
             Task.Run(async () =>
             {
