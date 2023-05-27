@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,20 @@ namespace Monopoly
                     await ProcessRequest(context);
                 }
             });
+        }
+
+
+
+        public void OpenWebBrowser(string url)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to open web browser: {ex.Message}");
+            }
         }
 
         private async Task ProcessRequest(HttpListenerContext context)

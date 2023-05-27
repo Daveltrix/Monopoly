@@ -213,26 +213,11 @@ namespace Monopoly
             }
 
 
-            WebServer webServer = new WebServer(_LPlayers);
-            webServer.Start();
-
-            // Open the web browser to the players URL
-            string playersUrl = "http://localhost:8080/players";
-            OpenWebBrowser(playersUrl);
+            
         }
 
 
-        private void OpenWebBrowser(string url)
-        {
-            try
-            {
-                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Failed to open web browser: {ex.Message}");
-            }
-        }
+        
         #endregion
 
     }
