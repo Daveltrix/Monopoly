@@ -32,7 +32,7 @@ namespace Monopoly
             webServer.OpenWebBrowser(playersUrl);
 
             #endregion
-            Int32 TotalBox = Setup._LBoxes.Count;
+            Int32 TotalBox = 6;//Setup._LBoxes.Count;
             Int32 Dice;
 
 
@@ -50,7 +50,7 @@ namespace Monopoly
                     
 
                     // Casillas especiales
-                    if (((Player.Box == 3) || (Player.Box == 4) || (Player.Box == 5)) && Player.Turn == true)
+                    if (((Player.Box == 345) || (Player.Box == 434) || (Player.Box == 543)) && Player.Turn == true)
                     {
                         Player.Turn = false;
                         Console.WriteLine($"Ha caido en la carcel. El jugador {Player.Id} --> " +
@@ -83,7 +83,7 @@ namespace Monopoly
 
                         if (Player.Money <= 0)
                         {
-                            Setup = FVariousFunctions.DeletePlayer(Setup);
+                            Setup = FVariousFunctions.DeletePlayer(Setup, Setup._LPlayers[i]);
                             i = i - 1;
                         }
 

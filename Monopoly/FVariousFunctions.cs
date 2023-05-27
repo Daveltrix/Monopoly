@@ -49,12 +49,21 @@ namespace Monopoly
         }
 
 
-        public static Game_SetUp DeletePlayer(Game_SetUp Setup)
+        public static Game_SetUp DeletePlayer(Game_SetUp Setup, CPlayers player)
         {
             for (int i = 0; i < Setup._LPlayers.Count; i++)
             {
                 if (Setup._LPlayers[i].Money <= 0)
                 {
+                    foreach(CPokemon _pokemon in Setup._LPokemon)
+                    {
+                        if ((_pokemon.Sold == true) && (_pokemon.Trainer == player.Name))
+                        {
+                            _pokemon.Sold = false;
+                            _pokemon.Trainer = null;
+                            _pokemon.Level = 1;
+                        }
+                    }
                     Console.WriteLine($"El jugador {Setup._LPlayers[i].Name} ha sido eliminado");
                     Setup._LPlayers.RemoveAt(i);                    
                 }
