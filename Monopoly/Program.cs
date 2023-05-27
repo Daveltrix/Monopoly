@@ -23,6 +23,14 @@ namespace Monopoly
 
             CPlayers Player = new CPlayers();
 
+
+            WebServer webServer = new WebServer(Setup._LPlayers);
+            webServer.Start();
+
+            // Open the web browser to the players URL
+            string playersUrl = "http://localhost:8080/players";
+            webServer.OpenWebBrowser(playersUrl);
+
             #endregion
             Int32 TotalBox = Setup._LBoxes.Count;
             Int32 Dice;
