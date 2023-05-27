@@ -38,8 +38,6 @@ namespace Monopoly
             });
         }
 
-
-
         public void OpenWebBrowser(string url)
         {
             try
@@ -61,7 +59,7 @@ namespace Monopoly
             response.ContentType = "application/json";
             response.Headers.Add("Access-Control-Allow-Origin", "*"); // Permite el acceso desde cualquier origen
 
-            if (request.Url.LocalPath == "/players")
+            if (request.Url!.LocalPath == "/players")
             {
                 var json = JsonConvert.SerializeObject(players);
                 var buffer = Encoding.UTF8.GetBytes(json);
