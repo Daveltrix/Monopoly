@@ -34,7 +34,7 @@
 			<Attack Name="Furia" Type="Grass" Power="60" />
 			<Attack Name="Hidrobomba" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Sentret" 		Value="4"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
+		<Pokemon Name="Noctowl" 		Value="4"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -43,7 +43,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Furret" 			Value="5"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
+		<Pokemon Name="Crobat" 			Value="5"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="SkyBlue" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -52,7 +52,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Hoothoot" 		Value="6"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
+		<Pokemon Name="Lanturn" 		Value="6"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -61,7 +61,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Noctowl" 		Value="7"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
+		<Pokemon Name="Togepi" 			Value="7"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -70,7 +70,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Ledyba" 			Value="8"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
+		<Pokemon Name="Xatu" 			Value="8"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Pink" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -79,7 +79,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Ledian" 			Value="9"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
+		<Pokemon Name="Ampharos" 		Value="9"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -88,7 +88,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Spinarak" 		Value="10"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
+		<Pokemon Name="Tyranitar" 			Value="10"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -97,7 +97,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Ariados" 		Value="11"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
+		<Pokemon Name="Sudowoodo" 		Value="11"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Orange" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -106,7 +106,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Crobat" 			Value="12"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
+		<Pokemon Name="Aipom" 			Value="12"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -115,7 +115,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Chinchou" 		Value="13"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
+		<Pokemon Name="Quagsire" 		Value="13"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -124,7 +124,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Lanturn" 		Value="14"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
+		<Pokemon Name="Espeon" 			Value="14"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Red" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -133,7 +133,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Pichu" 			Value="15"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
+		<Pokemon Name="Umbreon" 		Value="15"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -142,7 +142,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Cleffa" 			Value="16"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
+		<Pokemon Name="Murkrow" 		Value="16"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -151,7 +151,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Igglybuff" 		Value="17"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
+		<Pokemon Name="Misdreavus" 		Value="17"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Yellow" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -160,7 +160,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Togepi" 			Value="18"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Girafarig" 			Value="18"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -169,7 +169,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Togetic" 		Value="19"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Steelix" 		Value="19"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -178,7 +178,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Natu" 			Value="20"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
+		<Pokemon Name="Scizor" 			Value="20"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Green" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
@@ -187,7 +187,7 @@
 			<Attack Name="Ataque 5" Type="Grass" Power="60" />
 			<Attack Name="Ataque 6" Type="Grass" Power="70" />
 		</Attacks>
-		<Pokemon Name="Xatu" 			Value="21"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
+		<Pokemon Name="Heracross" 			Value="21"	Sold="false"	Level ="1"	MaxNum = "6" 	Color="Blue" />
 		<Attacks>
 			<Attack Name="Ataque 1" Type="Grass" Power="40" />
 			<Attack Name="Ataque 2" Type="Normal" Power="30" />
