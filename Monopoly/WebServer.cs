@@ -12,12 +12,16 @@ namespace Monopoly
     public class WebServer
     {
         private readonly List<CPlayers> players;
+        private readonly List<CBox> box;
+        private readonly List<CPokemon> pokemon;
         private readonly HttpListener listener;
         private String URL = "http://localhost:8080/";
 
-        public WebServer(List<CPlayers> players)
+        public WebServer(Game_SetUp Setup)
         {
-            this.players = players;
+            this.players = Setup._LPlayers;
+            this.box = Setup._LBoxes;
+            this.pokemon = Setup._LPokemon;
             listener = new HttpListener();
         }
 
@@ -62,6 +66,24 @@ namespace Monopoly
             if (request.Url!.LocalPath == "/players")
             {
                 var json = JsonConvert.SerializeObject(players);
+                var buffer = Encoding.UTF8.GetBytes(json);
+
+                // Envía la respuesta
+                response.ContentLength64 = buffer.Length;
+                await response.OutputStream.WriteAsync(buffer, 0, buffer.Length);
+            }
+            else if (request.Url!.LocalPath == "/box")
+            {
+                var json = JsonConvert.SerializeObject(box);
+                var buffer = Encoding.UTF8.GetBytes(json);
+
+                // Envía la respuesta
+                response.ContentLength64 = buffer.Length;
+                await response.OutputStream.WriteAsync(buffer, 0, buffer.Length);
+            }
+            else if (request.Url!.LocalPath == "/pokemon")
+            {
+                var json = JsonConvert.SerializeObject(pokemon);
                 var buffer = Encoding.UTF8.GetBytes(json);
 
                 // Envía la respuesta

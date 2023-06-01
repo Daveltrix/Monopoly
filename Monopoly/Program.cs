@@ -24,7 +24,7 @@ namespace Monopoly
             CPlayers Player = new CPlayers();
 
 
-            WebServer webServer = new WebServer(Setup._LPlayers);
+            WebServer webServer = new WebServer(Setup);
             webServer.Start();
 
             // Open the web browser to the players URL
