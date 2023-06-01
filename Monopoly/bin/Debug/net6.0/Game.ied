@@ -297,7 +297,25 @@
 	</Boxes>
 	
 	
-	<Settings>
-	</Settings>
+	
+	
+	<Medals>
+	  <Medal Name="Normal"  Trainer = ""/>
+	  <Medal Name="Flying"  Trainer = ""/>
+	  <Medal Name="Electric"  Trainer = ""/>
+	  <Medal Name="Ground"  Trainer = ""/>
+	  <Medal Name="Grass"  Trainer = ""/>
+	  <Medal Name="Water"  Trainer = ""/>
+	  <Medal Name="Fire"  Trainer = ""/>
+	  <Medal Name="Dragon"  Trainer = ""/>
+	</Medals>
+	  
+	
+	<Cards>
+       <Card Name="Quita un turno"/>
+	   <Card Name="Doy dinero"/>
+	   <Card Name="Propiedad gratis"/>
+	   <Card Name="Propiedad al doble"/>
+	</Cards>
 	
  </Game>
